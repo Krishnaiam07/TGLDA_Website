@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TGLDA — Contact / Services</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+          --green: #0b6623;
+          --blue: #1a73e8;
+          --orange: #ffb703;
+          --white: #ffffff;
+          --text: #122028;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+          font-family: 'Poppins', sans-serif;
+          background: linear-gradient(180deg, #f3fff3 0%, #f9fbff 100%);
+          color: var(--text);
+          overflow-x: hidden;
+        }
+
+        .top-bar {
+          width: 100%;
+          height: 10px;
+          background: linear-gradient(90deg, #138808 0%, #ffffff 50%, #1a73e8 100%);
+          animation: hue 10s infinite linear;
+        }
+        @keyframes hue { 0% { filter: hue-rotate(0deg); } 100% { filter: hue-rotate(360deg); } }
+
+        .site-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 14px 22px;
+          background: var(--white);
+          border-bottom: 4px solid var(--green);
+          box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+          position: sticky;
+          top: 0;
+          z-index: 1000;
+        }
+
+        .logo img { width: 80px; transition: transform 0.5s ease; }
+        .logo img:hover { transform: rotate(5deg) scale(1.05); }
+
+        .brand {
+          text-align: center;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 2px;
+          animation: fadeDown 1s ease;
+        }
+
+        .gov {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 700;
+          letter-spacing: 2px;
+          font-size: 14px;
+          color: var(--green);
+        }
+
+        .agency {
+          font-size: 18px;
+          font-weight: 500;
+        }
+
+        .agency small {
+          display: block;
+          font-size: 12px;
+          color: #667;
+          margin-top: 4px;
+        }
+
+        nav {
+          background: linear-gradient(90deg, var(--green), var(--blue));
+          padding: 14px 20px;
+          display: flex;
+          justify-content: center;
+          position: relative;
+          box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+          z-index: 999;
+        }
+
+        .nav-inner {
+          display: flex;
+          gap: 18px;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        .nav-links a {
+          color: var(--white);
+          padding: 10px 18px;
+          font-weight: 500;
+          text-decoration: none;
+          border-radius: 6px;
+          position: relative;
+          display: inline-flex;
+          align-items: center;
+          transition: all 0.3s ease;
+        }
+
+        .nav-links a::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 0;
+          height: 3px;
+          background: var(--orange);
+          transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after { width: 100%; }
+
+        .nav-links a.active {
+          background: #fff;
+          color: var(--green);
+          border-radius: 8px;
+        }
+
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+
+        .dropdown > a::after {
+          content: "▾";
+          font-size: 12px;
+          margin-left: 6px;
+          position: relative;
+          top: 1px;
+        }
+
+        .dropdown-content {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background: var(--white);
+          min-width: 210px;
+          border-radius: 10px;
+          box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(10px);
+          transition: all 0.25s ease;
+          z-index: 9999;
+          pointer-events: none;
+        }
+
+        .dropdown-content a {
+          color: var(--text);
+          text-decoration: none;
+          padding: 12px 16px;
+          display: block;
+          font-size: 14px;
+          transition: all 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+          background: linear-gradient(90deg, var(--green), var(--blue));
+          color: var(--white);
+          transform: scale(1.02);
+        }
+
+        .dropdown:hover .dropdown-content {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+          pointer-events: auto;
+        }
+
+        main {
+          max-width: 1100px;
+          margin: 40px auto 60px;
+          padding: 0 16px;
+        }
+
+        .contact-card {
+          background: var(--white);
+          border-radius: 16px;
+          box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+          padding: 32px 24px 36px;
+          text-align: center;
+          animation: fadeUp 0.9s ease;
+        }
+
+        .contact-card h1 {
+          font-family: 'Montserrat', sans-serif;
+          font-size: 24px;
+          color: var(--green);
+          margin-bottom: 8px;
+        }
+
+        .contact-card p.subtitle {
+          font-size: 14px;
+          color: #45525f;
+          margin-bottom: 24px;
+        }
+
+        .form-row {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 26px;
+        }
+
+        label {
+          font-weight: 500;
+          font-size: 14px;
+        }
+
+        select {
+          min-width: 260px;
+          padding: 10px 12px;
+          border-radius: 10px;
+          border: 1px solid #cdd8e3;
+          font-size: 14px;
+          outline: none;
+          transition: box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        select:focus {
+          border-color: var(--blue);
+          box-shadow: 0 0 0 3px rgba(26,115,232,0.16);
+        }
+
+        .details-card {
+          margin: 0 auto;
+          max-width: 420px;
+          text-align: left;
+          background: linear-gradient(145deg, #f7fff7, #ffffff);
+          border-radius: 14px;
+          border: 1px solid #e0f0e4;
+          padding: 18px 20px 20px;
+        }
+
+        .details-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 8px;
+        }
+
+        .details-header h2 {
+          font-size: 16px;
+          margin: 0;
+          color: #183a2b;
+        }
+
+        .badge {
+          font-size: 11px;
+          padding: 3px 8px;
+          border-radius: 999px;
+          background: rgba(11,102,35,0.08);
+          color: #0b6623;
+          text-transform: uppercase;
+          letter-spacing: 0.6px;
+        }
+
+        .details-line {
+          font-size: 14px;
+          margin: 4px 0;
+        }
+
+        .details-label {
+          font-weight: 500;
+          color: #4b5b66;
+        }
+
+        footer {
+          background: var(--green);
+          color: var(--white);
+          text-align: center;
+          padding: 16px;
+          margin-top: 40px;
+          font-size: 14px;
+        }
+
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeDown { from { opacity: 0; transform: translateY(-25px); } to { opacity: 1; transform: translateY(0); } }
+
+        @media (max-width: 600px) {
+          .contact-card { padding: 24px 18px 28px; }
+          .contact-card h1 { font-size: 20px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="top-bar"></div>
+
+<header class="site-header">
+    <div class="logo"><img src="logo.jpg" alt="Logo"></div>
+    <div class="brand">
+        <div class="gov">GOVERNMENT OF TELANGANA</div>
+        <div class="agency">
+            Telangana Livestock Development Agency — <strong>TGLDA</strong>
+            <small>Department of Animal Husbandry & Veterinary Services</small>
+        </div>
+    </div>
+    <div class="logo"><img src="logo.jpg" alt="Logo"></div>
+</header>
+
+<nav>
+    <div class="nav-inner nav-links">
+
+        <a href="index.html">HOME</a>
+        <a href="#">ANIMAL BREEDING</a>
+
+        <div class="dropdown">
+            <a href="#">FSBS</a>
+            <div class="dropdown-content">
+                <a href="loginpage.html">FSBS – Karimnagar</a>
+                <a href="loginpage.html">FSBS – Kamsanpalle</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="#">MEDIA</a>
+            <div class="dropdown-content">
+                <a href="photo-gallery.html">Photo Gallery</a>
+                <a href="#">Video Gallery</a>
+            </div>
+        </div>
+
+        <a href="#">CIRCULARS & GO's</a>
+        <!-- active on this page -->
+        <a href="contact.html" class="active">CONTACT/SERVICES</a>
+
+    </div>
+</nav>
+
+<main>
+    <section class="contact-card">
+        <h1>Contact Executive Officers Details</h1>
+        <p class="subtitle">
+            Select a district to view the contact details of the concerned Executive Officer.
+        </p>
+
+        <div class="form-row">
+            <label for="districtSelect">District</label>
+            <select id="districtSelect">
+                <option value="" selected disabled>Select a district</option>
+                <option value="Adilabad">Adilabad</option>
+                <option value="Bhadradri Kothagudem">Bhadradri Kothagudem</option>
+                <option value="Hanumakonda">Hanumakonda</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Jagtial">Jagtial</option>
+                <option value="Jangaon">Jangaon</option>
+                <option value="Jayashankar Bhupalpally">Jayashankar Bhupalpally</option>
+                <option value="Jogulamba Gadwal">Jogulamba Gadwal</option>
+                <option value="Kamareddy">Kamareddy</option>
+                <option value="Karimnagar">Karimnagar</option>
+                <option value="Khammam">Khammam</option>
+                <option value="Kumuram Bheem Asifabad">Kumuram Bheem Asifabad</option>
+                <option value="Mahabubabad">Mahabubabad</option>
+                <option value="Mahabubnagar">Mahabubnagar</option>
+                <option value="Mancherial">Mancherial</option>
+                <option value="Medak">Medak</option>
+                <option value="Medchal–Malkajgiri">Medchal–Malkajgiri</option>
+                <option value="Mulugu">Mulugu</option>
+                <option value="Nagarkurnool">Nagarkurnool</option>
+                <option value="Nalgonda">Nalgonda</option>
+                <option value="Narayanpet">Narayanpet</option>
+                <option value="Nirmal">Nirmal</option>
+                <option value="Nizamabad">Nizamabad</option>
+                <option value="Peddapalli">Peddapalli</option>
+                <option value="Rajanna Sircilla">Rajanna Sircilla</option>
+                <option value="Ranga Reddy">Ranga Reddy</option>
+                <option value="Sangareddy">Sangareddy</option>
+                <option value="Siddipet">Siddipet</option>
+                <option value="Suryapet">Suryapet</option>
+                <option value="Vikarabad">Vikarabad</option>
+                <option value="Wanaparthy">Wanaparthy</option>
+                <option value="Warangal">Warangal</option>
+                <option value="Yadadri Bhuvanagiri">Yadadri Bhuvanagiri</option>
+            </select>
+        </div>
+
+        <div class="details-card" id="detailsCard" style="display:none;">
+            <div class="details-header">
+                <h2 id="districtName">District Name</h2>
+                <span class="badge">Executive Officer</span>
+            </div>
+
+            <p class="details-line">
+                <span class="details-label">Name:</span>
+                <span id="officerName">Officer Name</span>
+            </p>
+            <p class="details-line">
+                <span class="details-label">Mobile:</span>
+                <span id="officerPhone">9999999999</span>
+            </p>
+            <p class="details-line">
+                <span class="details-label">Email:</span>
+                <span id="officerEmail">example@tglda.gov.in</span>
+            </p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    © 2025 Telangana Livestock Development Agency (TGLDA) — Government of Telangana
+</footer>
+
+<script>
+    // basic placeholder data – you can edit names / numbers later
+    const districtData = {
+      "Adilabad": {
+        name: "Executive Officer, Adilabad",
+        phone: "9999990001",
+        email: "eo.adilabad@tglda.gov.in"
+      },
+      "Bhadradri Kothagudem": {
+        name: "Executive Officer, Bhadradri Kothagudem",
+        phone: "9999990002",
+        email: "eo.bkothagudem@tglda.gov.in"
+      },
+      "Hanumakonda": {
+        name: "Executive Officer, Hanumakonda",
+        phone: "9999990003",
+        email: "eo.hanumakonda@tglda.gov.in"
+      },
+      "Hyderabad": {
+        name: "Executive Officer, Hyderabad",
+        phone: "9999990004",
+        email: "eo.hyderabad@tglda.gov.in"
+      },
+      "Jagtial": {
+        name: "Executive Officer, Jagtial",
+        phone: "9999990005",
+        email: "eo.jagtial@tglda.gov.in"
+      },
+      "Jangaon": {
+        name: "Executive Officer, Jangaon",
+        phone: "9999990006",
+        email: "eo.jangaon@tglda.gov.in"
+      },
+      "Jayashankar Bhupalpally": {
+        name: "Executive Officer, Jayashankar Bhupalpally",
+        phone: "9999990007",
+        email: "eo.jbhupalpally@tglda.gov.in"
+      },
+      "Jogulamba Gadwal": {
+        name: "Executive Officer, Jogulamba Gadwal",
+        phone: "9999990008",
+        email: "eo.jgadwal@tglda.gov.in"
+      },
+      "Kamareddy": {
+        name: "Executive Officer, Kamareddy",
+        phone: "9999990009",
+        email: "eo.kamareddy@tglda.gov.in"
+      },
+      "Karimnagar": {
+        name: "Executive Officer, Karimnagar",
+        phone: "9999990010",
+        email: "eo.karimnagar@tglda.gov.in"
+      },
+      "Khammam": {
+        name: "Executive Officer, Khammam",
+        phone: "9999990011",
+        email: "eo.khammam@tglda.gov.in"
+      },
+      "Kumuram Bheem Asifabad": {
+        name: "Executive Officer, Kumuram Bheem Asifabad",
+        phone: "9999990012",
+        email: "eo.kbasifabad@tglda.gov.in"
+      },
+      "Mahabubabad": {
+        name: "Executive Officer, Mahabubabad",
+        phone: "9999990013",
+        email: "eo.mahabubabad@tglda.gov.in"
+      },
+      "Mahabubnagar": {
+        name: "Executive Officer, Mahabubnagar",
+        phone: "9999990014",
+        email: "eo.mahabubnagar@tglda.gov.in"
+      },
+      "Mancherial": {
+        name: "Executive Officer, Mancherial",
+        phone: "9999990015",
+        email: "eo.mancherial@tglda.gov.in"
+      },
+      "Medak": {
+        name: "Executive Officer, Medak",
+        phone: "9999990016",
+        email: "eo.medak@tglda.gov.in"
+      },
+      "Medchal–Malkajgiri": {
+        name: "Executive Officer, Medchal–Malkajgiri",
+        phone: "9999990017",
+        email: "eo.medchalmalkajgiri@tglda.gov.in"
+      },
+      "Mulugu": {
+        name: "Executive Officer, Mulugu",
+        phone: "9999990018",
+        email: "eo.mulugu@tglda.gov.in"
+      },
+      "Nagarkurnool": {
+        name: "Executive Officer, Nagarkurnool",
+        phone: "9999990019",
+        email: "eo.nagarkurnool@tglda.gov.in"
+      },
+      "Nalgonda": {
+        name: "Executive Officer, Nalgonda",
+        phone: "9999990020",
+        email: "eo.nalgonda@tglda.gov.in"
+      },
+      "Narayanpet": {
+        name: "Executive Officer, Narayanpet",
+        phone: "9999990021",
+        email: "eo.narayanpet@tglda.gov.in"
+      },
+      "Nirmal": {
+        name: "Executive Officer, Nirmal",
+        phone: "9999990022",
+        email: "eo.nirmal@tglda.gov.in"
+      },
+      "Nizamabad": {
+        name: "Executive Officer, Nizamabad",
+        phone: "9999990023",
+        email: "eo.nizamabad@tglda.gov.in"
+      },
+      "Peddapalli": {
+        name: "Executive Officer, Peddapalli",
+        phone: "9999990024",
+        email: "eo.peddapalli@tglda.gov.in"
+      },
+      "Rajanna Sircilla": {
+        name: "Executive Officer, Rajanna Sircilla",
+        phone: "9999990025",
+        email: "eo.rsircilla@tglda.gov.in"
+      },
+      "Ranga Reddy": {
+        name: "Executive Officer, Ranga Reddy",
+        phone: "9999990026",
+        email: "eo.rangareddy@tglda.gov.in"
+      },
+      "Sangareddy": {
+        name: "Executive Officer, Sangareddy",
+        phone: "9999990027",
+        email: "eo.sangareddy@tglda.gov.in"
+      },
+      "Siddipet": {
+        name: "Executive Officer, Siddipet",
+        phone: "9999990028",
+        email: "eo.siddipet@tglda.gov.in"
+      },
+      "Suryapet": {
+        name: "Executive Officer, Suryapet",
+        phone: "9999990029",
+        email: "eo.suryapet@tglda.gov.in"
+      },
+      "Vikarabad": {
+        name: "Executive Officer, Vikarabad",
+        phone: "9999990030",
+        email: "eo.vikarabad@tglda.gov.in"
+      },
+      "Wanaparthy": {
+        name: "Executive Officer, Wanaparthy",
+        phone: "9999990031",
+        email: "eo.wanaparthy@tglda.gov.in"
+      },
+      "Warangal": {
+        name: "Executive Officer, Warangal",
+        phone: "9999990032",
+        email: "eo.warangal@tglda.gov.in"
+      },
+      "Yadadri Bhuvanagiri": {
+        name: "Executive Officer, Yadadri Bhuvanagiri",
+        phone: "9999990033",
+        email: "eo.ybhuvanagiri@tglda.gov.in"
+      }
+    };
+
+    const selectEl = document.getElementById('districtSelect');
+    const detailsCard = document.getElementById('detailsCard');
+    const districtNameEl = document.getElementById('districtName');
+    const officerNameEl = document.getElementById('officerName');
+    const officerPhoneEl = document.getElementById('officerPhone');
+    const officerEmailEl = document.getElementById('officerEmail');
+
+    selectEl.addEventListener('change', function () {
+      const district = this.value;
+      const data = districtData[district];
+
+      if (data) {
+        districtNameEl.textContent = district;
+        officerNameEl.textContent = data.name;
+        officerPhoneEl.textContent = data.phone;
+        officerEmailEl.textContent = data.email;
+
+        detailsCard.style.display = 'block';
+      } else {
+        detailsCard.style.display = 'none';
+      }
+    });
+</script>
+
+</body>
+</html>

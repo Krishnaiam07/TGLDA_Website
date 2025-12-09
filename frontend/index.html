@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GOVERNMENT OF TELANGANA — Telangana Livestock Development Agency (TGLDA)</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+          --green: #0b6623;
+          --blue: #1a73e8;
+          --orange: #ffb703;
+          --white: #ffffff;
+          --text: #122028;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+          font-family: 'Poppins', sans-serif;
+          background: linear-gradient(180deg, #f3fff3 0%, #f9fbff 100%);
+          color: var(--text);
+          overflow-x: hidden;
+        }
+
+        .top-bar {
+          width: 100%;
+          height: 10px;
+          background: linear-gradient(90deg, #138808 0%, #ffffff 50%, #1a73e8 100%);
+          animation: hue 10s infinite linear;
+        }
+        @keyframes hue { 0% { filter: hue-rotate(0deg); } 100% { filter: hue-rotate(360deg); } }
+
+        .site-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 14px 22px;
+          background: var(--white);
+          border-bottom: 4px solid var(--green);
+          box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+          position: sticky;
+          top: 0;
+          z-index: 1000;
+        }
+
+        .logo img { width: 80px; transition: transform 0.5s ease; }
+        .logo img:hover { transform: rotate(5deg) scale(1.05); }
+
+        .brand {
+          text-align: center;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 2px;
+          animation: fadeDown 1s ease;
+        }
+
+        .gov {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 700;
+          letter-spacing: 2px;
+          font-size: 14px;
+          color: var(--green);
+        }
+
+        .agency {
+          font-size: 18px;
+          font-weight: 500;
+        }
+
+        .agency small {
+          display: block;
+          font-size: 12px;
+          color: #667;
+          margin-top: 4px;
+        }
+
+        nav {
+          background: linear-gradient(90deg, var(--green), var(--blue));
+          padding: 14px 20px;
+          display: flex;
+          justify-content: center;
+          position: relative;
+          box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+          z-index: 999;
+        }
+
+        .nav-inner {
+          display: flex;
+          gap: 18px;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        .nav-links a {
+          color: var(--white);
+          padding: 10px 18px;
+          font-weight: 500;
+          text-decoration: none;
+          border-radius: 6px;
+          position: relative;
+          display: inline-flex;
+          align-items: center;
+          transition: all 0.3s ease;
+        }
+
+        .nav-links a::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 0;
+          height: 3px;
+          background: var(--orange);
+          transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after { width: 100%; }
+
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+
+        .dropdown > a::after {
+          content: "▾";
+          font-size: 12px;
+          margin-left: 6px;
+          position: relative;
+          top: 1px;
+        }
+
+        .dropdown-content {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background: var(--white);
+          min-width: 210px;
+          border-radius: 10px;
+          box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(10px);
+          transition: all 0.25s ease;
+          z-index: 9999;
+          pointer-events: none;
+        }
+
+        .dropdown-content a {
+          color: var(--text);
+          text-decoration: none;
+          padding: 12px 16px;
+          display: block;
+          font-size: 14px;
+          transition: all 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+          background: linear-gradient(90deg, var(--green), var(--blue));
+          color: var(--white);
+          transform: scale(1.02);
+        }
+
+        .dropdown:hover .dropdown-content {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+          pointer-events: auto;
+        }
+
+        .hero {
+          max-width: 1100px;
+          margin: 50px auto;
+          padding: 40px;
+          background: var(--white);
+          border-radius: 16px;
+          box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+          text-align: center;
+          animation: fadeUp 1s ease;
+        }
+
+        .hero h1 {
+          font-family: 'Montserrat', sans-serif;
+          font-size: 26px;
+          color: var(--green);
+          margin-bottom: 10px;
+        }
+
+        .hero p {
+          font-size: 15px;
+          color: #333;
+          line-height: 1.6;
+          margin-bottom: 20px;
+        }
+
+        footer {
+          background: var(--green);
+          color: var(--white);
+          text-align: center;
+          padding: 16px;
+          margin-top: 40px;
+          font-size: 14px;
+        }
+
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeDown { from { opacity: 0; transform: translateY(-25px); } to { opacity: 1; transform: translateY(0); } }
+
+        @media (max-width: 900px) {
+          .hero { margin: 25px; padding: 28px; }
+          .agency { font-size: 16px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="top-bar"></div>
+
+<header class="site-header">
+    <div class="logo"><img src="logo.jpg" alt="Logo"></div>
+    <div class="brand">
+        <div class="gov">GOVERNMENT OF TELANGANA</div>
+        <div class="agency">
+            Telangana Livestock Development Agency — <strong>TGLDA</strong>
+            <small>Department of Animal Husbandry & Veterinary Services</small>
+        </div>
+    </div>
+    <div class="logo"><img src="logo.jpg" alt="Logo"></div>
+</header>
+
+<nav>
+    <div class="nav-inner nav-links">
+
+        <a href="index.html">HOME</a>
+        <a href="#">ANIMAL BREEDING</a>
+
+        <div class="dropdown">
+            <a href="#">FSBS</a>
+            <div class="dropdown-content">
+                <a href="loginpage.html">FSBS – Karimnagar</a>
+                <a href="loginpage.html">FSBS – Kamsanpalle</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="#">MEDIA</a>
+            <div class="dropdown-content">
+                <a href="photo-gallery.html">Photo Gallery</a>
+                <a href="#">Video Gallery</a>
+            </div>
+        </div>
+
+        <a href="#">CIRCULARS & GO's</a>
+        <!-- changed this link -->
+        <a href="contact.html" style="background:#fff; color:var(--green); border-radius:8px;">CONTACT/SERVICES</a>
+
+    </div>
+</nav>
+
+<main>
+    <section class="hero">
+        <h1>Welcome to the Telangana Livestock Development Agency (TGLDA)</h1>
+        <p>
+            The Telangana Livestock Development Agency (TGLDA) serves as a centralized platform for
+            the Animal Breeding & Veterinary Services Department. Our mission is to promote sustainable
+            livestock growth and ensure quality breeding services across Telangana.
+        </p>
+    </section>
+</main>
+
+<footer>
+    © 2025 Telangana Livestock Development Agency (TGLDA) — Government of Telangana
+</footer>
+
+</body>
+</html>

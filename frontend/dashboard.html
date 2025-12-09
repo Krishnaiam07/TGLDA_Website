@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FSBS Dashboard | TGLDA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <style>
+        :root {
+          --green: #0f8a3f;
+          --blue: #0057b8;
+          --white: #ffffff;
+          --gray-bg: #f2f6f9;
+          --dark-text: #1d1d1d;
+        }
+
+        body {
+          margin: 0;
+          font-family: 'Inter', sans-serif;
+          background: linear-gradient(180deg, #e9f5ff 0%, #f7fffb 100%);
+          color: var(--dark-text);
+          min-height: 100vh;
+          overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 15px 40px;
+          background: linear-gradient(90deg, var(--blue), var(--green));
+          color: var(--white);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+          position: sticky;
+          top: 0;
+          z-index: 10;
+        }
+
+        .navbar .title {
+          font-size: 26px;
+          font-weight: 700;
+          letter-spacing: 0.5px;
+        }
+
+        .navbar .menu a {
+          color: var(--white);
+          text-decoration: none;
+          font-weight: 500;
+          background: rgba(255,255,255,0.15);
+          padding: 8px 18px;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+        }
+
+        .navbar .menu a:hover {
+          background: var(--white);
+          color: var(--blue);
+        }
+
+        /* Dashboard Section */
+        .dashboard {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 40px;
+          padding: 70px 20px;
+          animation: fadeIn 1s ease;
+        }
+
+        .card {
+          background: var(--white);
+          width: 320px;
+          height: 160px;
+          border-radius: 16px;
+          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          gap: 20px;
+          padding: 25px;
+          cursor: pointer;
+          transition: all 0.25s ease-in-out;
+          border-left: 6px solid var(--blue);
+          position: relative;
+          overflow: hidden;
+        }
+
+        /* Subtle shine effect */
+        .card::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 80%;
+          height: 100%;
+          background: linear-gradient(120deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+          transition: all 0.6s ease;
+        }
+
+        .card:hover::after {
+          left: 120%;
+        }
+
+        .card i {
+          font-size: 48px;
+          color: var(--blue);
+          transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .card-content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .card-content span {
+          font-size: 22px;
+          font-weight: 600;
+          color: #1e2a36;
+          margin-bottom: 6px;
+          transition: color 0.3s ease;
+        }
+
+        .card-content p {
+          font-size: 14px;
+          color: #666;
+          margin: 0;
+          transition: color 0.3s ease;
+        }
+
+        /* Minimal elegant hover */
+        .card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 10px 22px rgba(0, 87, 184, 0.15);
+          border-left-color: var(--green);
+        }
+
+        .card:hover i {
+          transform: scale(1.05);
+          color: var(--green);
+        }
+
+        .card:hover span {
+          color: var(--blue);
+        }
+
+        .card:hover p {
+          color: #444;
+        }
+
+        /* Back Button Section */
+        .back-button {
+          display: flex;
+          justify-content: center;
+          margin: 50px 0;
+        }
+
+        .back-button button {
+          background: linear-gradient(90deg, var(--blue), var(--green));
+          border: none;
+          color: var(--white);
+          padding: 12px 30px;
+          font-size: 16px;
+          font-weight: 600;
+          border-radius: 10px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 6px 15px rgba(0, 87, 184, 0.25);
+        }
+
+        .back-button button:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 25px rgba(15, 138, 63, 0.3);
+        }
+
+        /* Footer */
+        footer {
+          text-align: center;
+          padding: 18px;
+          background: var(--gray-bg);
+          color: #555;
+          font-size: 14px;
+          border-top: 1px solid #d9e3e7;
+        }
+
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+          .navbar .title {
+            font-size: 22px;
+          }
+          .card {
+            width: 90%;
+            height: auto;
+          }
+        }
+    </style>
+</head>
+
+<body>
+<!-- Navbar -->
+<div class="navbar">
+    <div class="title">FSBS Dashboard</div>
+    <div class="menu">
+        <a href="#" onclick="home()">Home</a>
+    </div>
+</div>
+
+<!-- Dashboard Section -->
+<div class="dashboard">
+    <div class="card" onclick="alert('Go to Production Section')">
+        <i class="fas fa-industry"></i>
+        <div class="card-content">
+            <span>Production</span>
+            <p>Manage semen collection and storage data efficiently.</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="alert('Go to Distribution Section')">
+        <i class="fas fa-truck-moving"></i>
+        <div class="card-content">
+            <span>Distribution</span>
+            <p>Track and manage semen distribution across centers.</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="alert('Go to Accounts Section')">
+        <i class="fas fa-file-invoice-dollar"></i>
+        <div class="card-content">
+            <span>Accounts</span>
+            <p>Monitor financial reports and transaction details.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Back Button -->
+<div class="back-button">
+    <button onclick="backLogin()">← Back to Login</button>
+</div>
+
+<!-- Footer -->
+<footer>
+    © 2025 Telangana Livestock Development Agency (TGLDA) — Government of Telangana
+</footer>
+
+<script>
+    function backLogin() {
+      window.location.href = "loginpage.html";
+    }
+    function home() {
+      window.location.href = "index.html";
+    }
+</script>
+</body>
+</html>
