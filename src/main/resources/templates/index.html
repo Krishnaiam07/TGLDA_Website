@@ -33,22 +33,39 @@
         }
         @keyframes hue { 0% { filter: hue-rotate(0deg); } 100% { filter: hue-rotate(360deg); } }
 
-        .site-header {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 14px 22px;
-          background: var(--white);
-          border-bottom: 4px solid var(--green);
-          box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-          position: sticky;
-          top: 0;
-          z-index: 1000;
-        }
+        .site-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px 40px;
+    background:#fff;
+    border-bottom:3px solid var(--green);
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
 
-        .logo img { width: 80px; transition: transform 0.5s ease; }
-        .logo img:hover { transform: rotate(5deg) scale(1.05); }
+      .logo{
+    width:120px;
+    height:120px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
 
+.logo img{
+    object-fit:contain;
+}
+
+/* Government Logo */
+.logo:first-child img{
+    width:95px;
+    height:95px;
+}
+
+/* Telangana Rising Logo */
+.logo:last-child img{
+    width:120px;
+    height:120px;
+}
         .brand {
           text-align: center;
           flex: 1;
@@ -214,6 +231,71 @@
           .hero { margin: 25px; padding: 28px; }
           .agency { font-size: 16px; }
         }
+        .leaders-section{
+    max-width:1200px;
+    margin:20px auto;
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    padding:0 20px;
+    flex-wrap:wrap;
+}
+
+.leader-card{
+    width:220px;
+    background:#fff;
+    border-radius:12px;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+    transition:.3s;
+}
+
+.leader-card:hover{
+    transform:translateY(-3px);
+}
+
+.leader-card img{
+    width:100px;
+    height:100px;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid #0b6623;
+}
+
+.leader-card h3{
+    margin-top:10px;
+    font-size:15px;
+    color:#0b6623;
+}
+
+.leader-card p{
+    font-size:13px;
+    color:#555;
+    margin-top:5px;
+}
+        .home-layout{
+    max-width:1400px;
+    margin:25px auto;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:25px;
+    padding:0 20px;
+}
+
+.side-leaders{
+    width:240px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.hero{
+    flex:1;
+    margin:0;
+    max-width:850px;
+}
     </style>
 </head>
 
@@ -222,7 +304,11 @@
 <div class="top-bar"></div>
 
 <header class="site-header">
-    <div class="logo"><img src="logo.jpg" alt="Logo"></div>
+
+    <div class="logo">
+        <img src="/Govt.jpg.png" alt="Government of Telangana">
+    </div>
+
     <div class="brand">
         <div class="gov">GOVERNMENT OF TELANGANA</div>
         <div class="agency">
@@ -230,51 +316,90 @@
             <small>Department of Animal Husbandry & Veterinary Services</small>
         </div>
     </div>
-    <div class="logo"><img src="logo.jpg" alt="Logo"></div>
-</header>
 
+    <div class="logo">
+        <img src="/raise.jpg.png" alt="Telangana Rising">
+    </div>
+
+</header>
 <nav>
     <div class="nav-inner nav-links">
 
-        <a href="index.html">HOME</a>
+        <a href="/">HOME</a>
         <a href="#">ANIMAL BREEDING</a>
 
         <div class="dropdown">
             <a href="#">FSBS</a>
             <div class="dropdown-content">
-                <a href="loginpage.html">FSBS – Karimnagar</a>
-                <a href="loginpage.html">FSBS – Kamsanpalle</a>
+                <a href="/login">FSBS – Karimnagar</a>
+                <a href="/login">FSBS – Kamsanpalle</a>
             </div>
         </div>
 
         <div class="dropdown">
             <a href="#">MEDIA</a>
             <div class="dropdown-content">
-                <a href="photo-gallery.html">Photo Gallery</a>
+                <a href="/photo-gallery">Photo Gallery</a>
                 <a href="#">Video Gallery</a>
             </div>
         </div>
 
         <a href="#">CIRCULARS & GO's</a>
         <!-- changed this link -->
-        <a href="contact.html" style="background:#fff; color:var(--green); border-radius:8px;">CONTACT/SERVICES</a>
+        <a href="contact" style="background:#fff; color:var(--green); border-radius:8px;">CONTACT/SERVICES</a>
 
     </div>
 </nav>
+<div class="home-layout">
 
-<main>
+    <div class="side-leaders">
+
+        <div class="leader-card">
+            <img src="/cm.jpg.png" alt="Chief Minister">
+            <h3>Sri A. Revanth Reddy</h3>
+            <p>Hon'ble Chief Minister</p>
+        </div>
+
+        <div class="leader-card">
+            <img src="/min.jpg.png" alt="Minister">
+            <h3>Sri Vakiti Srihari</h3>
+            <p>Minister for Animal Husbandry</p>
+        </div>
+
+    </div>
+
     <section class="hero">
-        <h1>Welcome to the Telangana Livestock Development Agency (TGLDA)</h1>
+        <h1>Welcome to the
+            Telangana Livestock Development Agency (TGLDA)</h1>
         <p>
             The Telangana Livestock Development Agency (TGLDA) serves as a centralized platform for
             the Animal Breeding & Veterinary Services Department. Our mission is to promote sustainable
             livestock growth and ensure quality breeding services across Telangana.
         </p>
     </section>
-</main>
+
+    <div class="side-leaders">
+
+        <div class="leader-card">
+            <img src="/dep.jpg.png" alt="Deputy CM">
+            <h3>Sri Bhatti Vikramarka</h3>
+            <p>Hon'ble Deputy Chief Minister</p>
+        </div>
+
+        <div class="leader-card">
+            <img src="/chair.jpg.png" alt="Chairman">
+            <h3>Dr. Singam Charan</h3>
+            <p>TGLDA Chairman</p>
+        </div>
+
+    </div>
+
+</div>
+
+
 
 <footer>
-    © 2025 Telangana Livestock Development Agency (TGLDA) — Government of Telangana
+    © 2026 Telangana Livestock Development Agency (TGLDA) — Government of Telangana
 </footer>
 
 </body>
