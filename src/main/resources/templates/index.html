@@ -32,70 +32,95 @@
           animation: hue 10s infinite linear;
         }
         @keyframes hue { 0% { filter: hue-rotate(0deg); } 100% { filter: hue-rotate(360deg); } }
-
-        .site-header{
+.site-header{
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    padding:10px 40px;
+    align-items:center;
+    padding:4px 25px;
     background:#fff;
-    border-bottom:3px solid var(--green);
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    border-bottom:2px solid #0b6623;
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
 }
 
-      .logo{
-    width:120px;
-    height:120px;
+/* LEFT LOGO */
+.header-left{
+    width:100px;
     display:flex;
     align-items:center;
-    justify-content:center;
+    justify-content:flex-start;
 }
 
-.logo img{
+.header-left img{
+    width:80px;
+    height:80px;
     object-fit:contain;
 }
 
-/* Government Logo */
-.logo:first-child img{
-    width:95px;
-    height:95px;
+/* CENTER AREA */
+.header-center{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
 }
 
-/* Telangana Rising Logo */
-.logo:last-child img{
-    width:120px;
-    height:120px;
+/* TGLDA LOGO */
+.center-logo{
+    width:65px;
+    height:65px;
+    object-fit:contain;
+    margin-bottom:2px;
 }
-        .brand {
-          text-align: center;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 2px;
-          animation: fadeDown 1s ease;
-        }
 
-        .gov {
-          font-family: 'Montserrat', sans-serif;
-          font-weight: 700;
-          letter-spacing: 2px;
-          font-size: 14px;
-          color: var(--green);
-        }
+/* MAIN HEADING */
+.gov{
+    font-size:40px;
+    font-weight:900;
+    color:#0b6623;
+    letter-spacing:1px;
+    line-height:1.05;
+    text-transform:uppercase;
+}
 
-        .agency {
-          font-size: 18px;
-          font-weight: 500;
-        }
+/* TGLDA */
+.agency{
+    font-size:48px;
+    font-weight:900;
+    line-height:1.05;
+    margin-top:6px;
+    margin-bottom:8px;
+    letter-spacing:2px;
 
-        .agency small {
-          display: block;
-          font-size: 12px;
-          color: #667;
-          margin-top: 4px;
-        }
+    background:linear-gradient(135deg,#0b6623 0%, #1a73e8 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 
+    text-shadow:0 3px 12px rgba(26,115,232,.15);
+}
+/* DEPARTMENT TEXT */
+.brand small{
+    display:block;
+    margin-top:2px;
+    font-size:14px;
+    color:#555;
+    font-weight:500;
+}
+
+/* RIGHT LOGO */
+.header-right{
+    width:100px;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+
+.header-right img{
+    width:80px;
+    height:80px;
+    object-fit:contain;
+}
         nav {
           background: linear-gradient(90deg, var(--green), var(--blue));
           padding: 14px 20px;
@@ -327,7 +352,200 @@
 .hero{
     flex:1;
     margin:0;
-    max-width:850px;
+    max-width:1100px;
+}
+        .footer-links{
+    background: linear-gradient(135deg,#f8fffa,#eef7ff);
+    padding:35px 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:18px;
+    border-top:3px solid #0b6623;
+    box-shadow:0 -5px 20px rgba(0,0,0,0.05);
+}
+
+.footer-links a{
+    text-decoration:none;
+    color:#0b6623;
+    font-weight:600;
+    font-size:15px;
+    padding:12px 22px;
+    background:rgba(255,255,255,0.85);
+    border:1px solid rgba(11,102,35,0.25);
+    border-radius:30px;
+    backdrop-filter:blur(8px);
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    transition:all .3s ease;
+}
+
+.footer-links a:hover{
+    background:linear-gradient(135deg,#0b6623,#1a73e8);
+    color:#fff;
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(26,115,232,0.25);
+}.site-footer{
+    background:#0b6623;
+    color:#fff;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    border-top:3px solid #ffffff20;
+}
+
+.footer-left{
+    font-size:15px;
+    font-weight:600;
+}
+
+.footer-right{
+    text-align:right;
+    font-size:13px;
+    line-height:1;
+    opacity:.95;
+}
+
+
+.footer-right strong{
+    color:#ffd54f;
+    display:block;
+    margin-top:8px;
+    margin-bottom:2px;
+}
+
+.footer-right a{
+    color:#ffffff;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.footer-right a:hover{
+    color:#ffd54f;
+}
+@media(max-width:768px){
+    .site-footer{
+        flex-direction:column;
+        text-align:center;
+        gap:10px;
+    }
+
+    .footer-right{
+        text-align:center;
+    }
+}.activity-title{
+    text-align:center;
+    font-size:42px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:4px;
+
+    background:linear-gradient(
+        90deg,
+        #0b6623,
+        #1a73e8,
+        #0b6623
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    position:relative;
+    margin-bottom:50px;
+
+    text-shadow:
+        0 0 20px rgba(26,115,232,.25);
+
+    animation:shine 5s linear infinite;
+}
+
+.activity-title::after{
+    content:'';
+    position:absolute;
+    left:50%;
+    bottom:-15px;
+    transform:translateX(-50%);
+
+    width:220px;
+    height:5px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #0b6623,
+        #1a73e8,
+        #0b6623,
+        transparent
+    );
+
+    box-shadow:
+        0 0 15px rgba(26,115,232,.5),
+        0 0 25px rgba(11,102,35,.4);
+}
+
+@keyframes shine{
+    0%{
+        filter:hue-rotate(0deg);
+    }
+    100%{
+        filter:hue-rotate(360deg);
+    }
+}
+
+.activities-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.activity-card{
+    background:rgba(255,255,255,0.65);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.4);
+    border-radius:22px;
+
+    min-height:140px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.4s;
+    cursor:pointer;
+}
+
+.activity-card span{
+    font-size:40px;
+    margin-bottom:12px;
+}
+
+.activity-card h3{
+    color:#0b6623;
+    font-size:20px;
+    font-weight:700;
+}
+
+.activity-card:hover{
+    transform:translateY(-8px);
+    background:linear-gradient(135deg,#0b6623,#1a73e8);
+}
+
+.activity-card:hover h3,
+.activity-card:hover span{
+    color:#fff;
+}
+
+@media(max-width:768px){
+    .activities-grid{
+        grid-template-columns:1fr;
+    }
 }
     </style>
 </head>
@@ -338,20 +556,33 @@
 
 <header class="site-header">
 
-    <div class="logo">
-        <img src="/Govt.jpg.png" alt="Government of Telangana">
+    <div class="header-left">
+        <img src="/Goi.jpg" alt="">
     </div>
 
-    <div class="brand">
-        <div class="gov">GOVERNMENT OF TELANGANA</div>
-        <div class="agency">
-            Telangana Livestock Development Agency — <strong>TGLDA</strong>
-            <small>Department of Veterinary & Animal Husbandry</small>
+    <div class="header-center">
+
+        <img src="/Tglda.jpg.png" class="center-logo">
+
+        <div class="brand">
+
+            <div class="gov">
+                TELANGANA LIVESTOCK DEVELOPMENT AGENCY
+            </div>
+
+            <div class="agency">
+                TGLDA
+            </div>
+
+            <small>
+                Department of Animal Husbandry, Government of Telangana
+            </small>
+
         </div>
-    </div>
 
-    <div class="logo">
-        <img src="/Raise.jpg" alt="Telangana Rising">
+    </div>
+    <div class="header-right">
+        <img src="/Govt.jpg.png">
     </div>
 
 </header>
@@ -379,8 +610,8 @@
 
         <a href="#">CIRCULARS & GO's</a>
         <!-- changed this link -->
-        <a href="contact" style="background:#fff; color:var(--green); border-radius:8px;">CONTACT/SERVICES</a>
-        <a href="deptLogin" style="background:#fff; color:var(--green); border-radius:8px;">Dept Login</a>
+        <a href="contact" style="background:#fff; color:var(--green); border-radius:8px;">CONTACT</a>
+        <a href="#" style="background:#fff; color:var(--green); border-radius:8px;">CEO LOGIN</a>
 
     </div>
 </nav>
@@ -404,13 +635,58 @@
     </div>
 
     <section class="hero">
-        <h1>Welcome to the
-            Telangana Livestock Development Agency (TGLDA)</h1>
+
+        <h1>Welcome to the Telangana Livestock Development Agency (TGLDA)</h1>
+
         <p>
             The Telangana Livestock Development Agency (TGLDA) serves as a centralized platform for
-            the Animal Breeding & Veterinary Department. Our mission is to promote sustainable
-            livestock growth and ensure quality breeding services across Telangana.
+            the Animal Breeding & Veterinary Department.
         </p>
+        <h2 class="activity-title">ACTIVITIES OF TGLDA</h2>
+
+        <div class="activities-grid">
+
+            <div class="activity-card">
+                <span>🐄</span>
+                <h3>Breeding Inputs</h3>
+            </div>
+
+            <div class="activity-card">
+                <span>🧬</span>
+                <h3>IVF Laboratory</h3>
+            </div>
+
+            <div class="activity-card">
+                <span>📱</span>
+                <h3>Doorstep AI</h3>
+            </div>
+
+            <div class="activity-card">
+                <span>🏆</span>
+                <h3>ABIP Programme</h3>
+            </div>
+
+            <div class="activity-card">
+                <span>🧑‍🌾</span>
+                <h3>MAITRIs</h3>
+            </div>
+
+            <div class="activity-card">
+                <span>📢</span>
+                <h3>Awareness Camps</h3>
+            </div>
+
+            <div class="activity-card">
+                <span>🛡️</span>
+                <h3>Insurance</h3>
+            </div>
+
+            <div class="activity-card">
+                <span>❄️</span>
+                <h3>Frozen Semen</h3>
+            </div>
+
+        </div>
     </section>
 
     <div class="side-leaders">
@@ -431,10 +707,41 @@
 
 </div>
 
+<section class="footer-links">
 
+    <h3 style="width:100%;text-align:center;color:#0b6623;margin-bottom:15px;font-size:24px;">
+        Quick Links
+    </h3>
 
-<footer>
-    © 2026 Telangana Livestock Development Agency (TGLDA) — Government of Telangana
+    <a href="#">About TGLDA</a>
+    <a href="#">Our Services</a>
+    <a href="#">Our Projects</a>
+    <a href="#">TGLDA Schemes</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms & Conditions</a>
+    <a href="https://www.google.com/maps/place/A+P+Live+Stock+Development+Agency/@17.3998277,78.4542467,21z/data=!4m6!3m5!1s0x3bcb91b971555555:0x380c03ce7277efb!8m2!3d17.399837!4d78.454363!16s%2Fg%2F1v1tljwg?entry=ttu" target="_blank">
+        Find Us On Map
+    </a>
+</section>
+
+<footer class="site-footer">
+
+    <div class="footer-left">
+        © 2026 Telangana Livestock Development Agency (TGLDA)
+    </div>
+
+    <div class="footer-right">
+        <strong>Office Address:</strong><br>
+        TGLDA, Road No. 4,<br>
+        Shanti Nagar, Masab Tank,<br>
+        Hyderabad - 500028<br><br>
+
+        <strong>Email:</strong><br>
+        <a href="mailto:tslda1382014@gmail.com">
+            tslda1382014@gmail.com
+        </a>
+    </div>
+
 </footer>
 
 </body>
