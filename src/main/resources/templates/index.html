@@ -31,94 +31,95 @@
           background: linear-gradient(90deg, #138808 0%, #ffffff 50%, #1a73e8 100%);
           animation: hue 10s infinite linear;
         }
-        @keyframes hue { 0% { filter: hue-rotate(0deg); } 100% { filter: hue-rotate(360deg); } }
-.site-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:4px 25px;
-    background:#fff;
-    border-bottom:2px solid #0b6623;
-    box-shadow:0 2px 8px rgba(0,0,0,.05);
-}
+        @keyframes hue { 0% { filter: hue-rotate(0deg); } 100% { filter: hue-rotate(360deg); }}
 
 /* LEFT LOGO */
-.header-left{
-    width:100px;
+.site-header{
     display:flex;
     align-items:center;
+    justify-content:space-between;
+    padding:15px 30px;
+    background:#fff;
+}
+
+.header-left{
+    width:120px;
+    display:flex;
     justify-content:flex-start;
 }
 
 .header-left img{
-    width:80px;
-    height:80px;
+    width:90px;
+    height:90px;
     object-fit:contain;
 }
 
-/* CENTER AREA */
-.header-center{
+.header-center-row{
     flex:1;
     display:flex;
-    flex-direction:column;
     align-items:center;
     justify-content:center;
+    gap:20px;
+
+    min-width:1200px;
+}
+.center-logo{
+    width:100px;
+    height:100px;
+    object-fit:contain;
+}
+.brand{
     text-align:center;
 }
 
-/* TGLDA LOGO */
-.center-logo{
-    width:65px;
-    height:65px;
-    object-fit:contain;
-    margin-bottom:2px;
-}
-
-/* MAIN HEADING */
 .gov{
-    font-size:40px;
+    font-family:'Montserrat',sans-serif;
+
+    font-size:42px;   /* reduced size */
     font-weight:900;
-    color:#0b6623;
-    letter-spacing:1px;
-    line-height:1.05;
+
     text-transform:uppercase;
+    letter-spacing:1px;
+    line-height:1.1;
+
+    color:#0b6623;
+
+    white-space:nowrap;   /* FORCE ONE LINE */
+
+    text-shadow:
+        0 2px 5px rgba(0,0,0,.08),
+        0 8px 25px rgba(26,115,232,.12);
 }
 
-/* TGLDA */
 .agency{
-    font-size:48px;
-    font-weight:900;
-    line-height:1.05;
-    margin-top:6px;
-    margin-bottom:8px;
-    letter-spacing:2px;
+    background:linear-gradient(
+        135deg,
+        #0b6623,
+        #1a73e8,
+        #0b6623
+    );
 
-    background:linear-gradient(135deg,#0b6623 0%, #1a73e8 100%);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 
-    text-shadow:0 3px 12px rgba(26,115,232,.15);
+    font-weight:900;
 }
-/* DEPARTMENT TEXT */
-.brand small{
+.brand strong{
     display:block;
-    margin-top:2px;
-    font-size:14px;
-    color:#555;
-    font-weight:500;
+    margin-top:8px;
+    font-size:22px;
+    color:#444;
 }
 
-/* RIGHT LOGO */
 .header-right{
-    width:100px;
+    width:120px;
     display:flex;
     justify-content:flex-end;
-    align-items:center;
 }
 
 .header-right img{
-    width:80px;
-    height:80px;
+    width:90px;
+    height:90px;
     object-fit:contain;
 }
         nav {
@@ -250,6 +251,7 @@
         }
 
         @keyframes fadeUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
+
         @keyframes fadeDown { from { opacity: 0; transform: translateY(-25px); } to { opacity: 1; transform: translateY(0); } }
 
         @media (max-width: 900px) {
@@ -546,8 +548,105 @@
     .activities-grid{
         grid-template-columns:1fr;
     }
+}/* FOOTER DROPDOWN */
+
+/* ===========================
+   IMPORTANT LINKS DROPDOWN
+=========================== */
+
+/* ==========================
+   IMPORTANT LINKS DROPDOWN
+========================== */
+
+.footer-dropdown{
+    position:relative;
+    display:inline-block;
 }
-    </style>
+
+.footer-btn{
+    background:linear-gradient(135deg,#0b6623,#1a73e8);
+    color:#fff;
+    border:none;
+    outline:none;
+    cursor:pointer;
+
+    padding:12px 28px;
+    border-radius:30px;
+
+    font-size:15px;
+    font-weight:700;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+.footer-btn:hover{
+    transform:translateY(-2px);
+}
+
+.footer-dropdown-content{
+    position:absolute;
+
+    top:100%;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    margin-top:8px;
+
+    width:200px;
+
+    background:#ffffff;
+
+    border-radius:14px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.18);
+
+    overflow:hidden;
+
+    opacity:0;
+    visibility:hidden;
+
+    z-index:99999;
+
+    transition:.25s ease;
+}
+
+.footer-dropdown:hover .footer-dropdown-content{
+    opacity:1;
+    visibility:visible;
+}
+
+.footer-dropdown-content a{
+    display:block;
+
+    padding:16px 20px;
+
+    background:#ffffff !important;
+    color:#222 !important;
+
+    text-decoration:none;
+    font-size:13px;
+    font-weight:600;
+
+    margin:0 !important;
+
+    border:none !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+
+    border-bottom:1px solid #ececec !important;
+
+    transition:all .25s ease;
+}
+
+.footer-dropdown-content a:last-child{
+    border-bottom:none !important;
+}
+
+.footer-dropdown-content a:hover{
+    background:#f4f8ff !important;
+    color:#0b6623 !important;
+    padding-left:28px;
+}  </style>
 </head>
 
 <body>
@@ -557,32 +656,30 @@
 <header class="site-header">
 
     <div class="header-left">
-        <img src="/Goi.jpg" alt="">
+        <img src="/Goi.jpg" alt="GOI Logo">
     </div>
 
-    <div class="header-center">
+    <div class="header-center-row">
 
-        <img src="/Tglda.jpg.png" class="center-logo">
+        <img src="/Tglda.jpg.png" class="center-logo" alt="TGLDA Logo">
 
         <div class="brand">
 
             <div class="gov">
                 TELANGANA LIVESTOCK DEVELOPMENT AGENCY
+                <span class="agency">- (TGLDA)</span>
             </div>
 
-            <div class="agency">
-                TGLDA
-            </div>
-
-            <small>
+            <strong>
                 Department of Animal Husbandry, Government of Telangana
-            </small>
+            </strong>
 
         </div>
 
     </div>
+
     <div class="header-right">
-        <img src="/Govt.jpg.png">
+        <img src="/Govt.jpg.png" alt="Telangana Logo">
     </div>
 
 </header>
@@ -609,9 +706,11 @@
         </div>
 
         <a href="#">CIRCULARS & GO's</a>
+        <a href="#">OUR TEAM</a>
         <!-- changed this link -->
         <a href="contact" style="background:#fff; color:var(--green); border-radius:8px;">CONTACT</a>
         <a href="#" style="background:#fff; color:var(--green); border-radius:8px;">CEO LOGIN</a>
+        <a href="#" style="background:#fff; color:var(--green); border-radius:8px;">CHAIRMAN / CEOs</a>
 
     </div>
 </nav>
@@ -620,17 +719,12 @@
     <div class="side-leaders">
 
         <div class="leader-card">
-            <img src="/cm.jpg.png">
-            <h3>Sri A. Revanth Reddy</h3>
-            <p>Hon'ble Chief Minister ,Municipal Administration and Urban Development; General Administration, Law & Order and all other unallocated portfolios
+            <img src="/min.jpg.png">
+            <h3>Sri Vakiti Srihari</h3>
+            <p>Hon'ble Minister for Animal Husbandry, Dairy Development and Fisheries, Sports and Youth Services</p>
                </p>
         </div>
 
-        <div class="leader-card">
-            <img src="/min.jpg.png" alt="Minister">
-            <h3>Sri Vakiti Srihari</h3>
-            <p>Hon'ble Minister for Animal Husbandry, Dairy Development and Fisheries, Sports and Youth Services</p>
-        </div>
 
     </div>
 
@@ -692,16 +786,10 @@
     <div class="side-leaders">
 
         <div class="leader-card">
-            <img src="/dep.jpg.png" alt="Deputy CM">
-            <h3>Sri Bhatti Vikramarka</h3>
-            <p>Hon'ble Deputy Chief Minister, Finance & Planning, Energy</p>
-        </div>
-
-        <div class="leader-card">
-            <img src="/chair.jpg.png" alt="Chairman">
-            <h3>Dr.Singam Charan</h3>
-            <p>TGLDA Chairman</p>
-        </div>
+        <img src="/chair.jpg.png" alt="Chairman">
+        <h3>Dr.Singam Kaushik Charan</h3>
+        <p>TGLDA Chairman</p>
+    </div>
 
     </div>
 
@@ -719,7 +807,31 @@
     <a href="#">TGLDA Schemes</a>
     <a href="#">Privacy Policy</a>
     <a href="#">Terms & Conditions</a>
-    <a href="https://www.google.com/maps/place/A+P+Live+Stock+Development+Agency/@17.3998277,78.4542467,21z/data=!4m6!3m5!1s0x3bcb91b971555555:0x380c03ce7277efb!8m2!3d17.399837!4d78.454363!16s%2Fg%2F1v1tljwg?entry=ttu" target="_blank">
+
+    <div class="footer-dropdown">
+
+        <button class="footer-btn">
+            IMPORTANT LINKS ▼
+        </button>
+
+        <div class="footer-dropdown-content">
+
+            <a href="https://bharatpashudhan.ndlm.co.in/" target="_blank">
+                Bharat Pashudhan
+            </a>
+
+            <a href="https://vahd.telangana.gov.in/" target="_blank">
+                Directorate of Animal Husbandry
+            </a>
+
+            <a href="https://www.telangana.gov.in/" target="_blank">
+                Telangana Official Website
+            </a>
+
+        </div>
+
+    </div>
+     <a href="https://www.google.com/maps/place/A+P+Live+Stock+Development+Agency/@17.3998277,78.4542467,21z/data=!4m6!3m5!1s0x3bcb91b971555555:0x380c03ce7277efb!8m2!3d17.399837!4d78.454363!16s%2Fg%2F1v1tljwg?entry=ttu" target="_blank">
         Find Us On Map
     </a>
 </section>
