@@ -38,20 +38,52 @@
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:15px 30px;
+    padding:10px 20px;
     background:#fff;
 }
 
 .header-left{
-    width:120px;
     display:flex;
-    justify-content:flex-start;
+    align-items:center;
+    gap:12px;
+    width:260px;
 }
 
-.header-left img{
-    width:90px;
-    height:90px;
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    width:260px;
+    justify-content:flex-end;
+}
+
+.corner-logo{
+    width:80px;
+    height:80px;
     object-fit:contain;
+}
+
+.top-person{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+.top-person img{
+    width:70px;
+    height:85px;
+    object-fit:cover;
+    border-radius:6px;
+    border:2px solid #e5e5e5;
+}
+
+.top-person span{
+    font-size:10px;
+    font-weight:600;
+    color:#0b6623;
+    margin-top:4px;
+    line-height:1.2;
 }
 
 .header-center-row{
@@ -59,70 +91,40 @@
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:20px;
-
-    min-width:1200px;
+    gap:10px;
 }
+
 .center-logo{
-    width:100px;
-    height:100px;
+    width:85px;
+    height:85px;
     object-fit:contain;
 }
+
 .brand{
     text-align:center;
 }
 
 .gov{
     font-family:'Montserrat',sans-serif;
-
-    font-size:42px;   /* reduced size */
+    font-size:32px;
     font-weight:900;
-
-    text-transform:uppercase;
+    color:#0b6623;
+    white-space:nowrap;
     letter-spacing:1px;
     line-height:1.1;
-
-    color:#0b6623;
-
-    white-space:nowrap;   /* FORCE ONE LINE */
-
-    text-shadow:
-        0 2px 5px rgba(0,0,0,.08),
-        0 8px 25px rgba(26,115,232,.12);
 }
 
 .agency{
-    background:linear-gradient(
-        135deg,
-        #0b6623,
-        #1a73e8,
-        #0b6623
-    );
-
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-
-    font-weight:900;
+    color:#1a73e8;
 }
+
 .brand strong{
     display:block;
-    margin-top:8px;
-    font-size:22px;
+    font-size:15px;
     color:#444;
+    margin-top:5px;
 }
-
-.header-right{
-    width:120px;
-    display:flex;
-    justify-content:flex-end;
-}
-
-.header-right img{
-    width:90px;
-    height:90px;
-    object-fit:contain;
-}
-        nav {
+     nav {
           background: linear-gradient(90deg, var(--green), var(--blue));
           padding: 14px 20px;
           display: flex;
@@ -656,15 +658,19 @@
 <header class="site-header">
 
     <div class="header-left">
-        <img src="/Goi.jpg" alt="GOI Logo">
+        <img src="/Goi.jpg" class="corner-logo">
+
+        <div class="top-person">
+            <img src="/cm.jpg.png">
+            <span>Sri Hon'ble Chief Minister</span>
+        </div>
     </div>
 
     <div class="header-center-row">
 
-        <img src="/Tglda.jpg.png" class="center-logo" alt="TGLDA Logo">
+        <img src="/Tglda.jpg.png" class="center-logo">
 
         <div class="brand">
-
             <div class="gov">
                 TELANGANA LIVESTOCK DEVELOPMENT AGENCY
                 <span class="agency">- (TGLDA)</span>
@@ -673,15 +679,21 @@
             <strong>
                 Department of Animal Husbandry, Government of Telangana
             </strong>
-
         </div>
 
     </div>
 
     <div class="header-right">
-        <img src="/Govt.jpg.png" alt="Telangana Logo">
-    </div>
 
+        <div class="top-person">
+            <img src="/dep.jpg.png">
+            <span>Hon'ble Deputy Chief Minister</span>
+        </div>
+
+        <img src="/Govt.jpg.png" class="corner-logo">
+
+    </div>
+    </div>
 </header>
 <nav>
     <div class="nav-inner nav-links">
