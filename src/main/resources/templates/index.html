@@ -6,6 +6,8 @@
     <title>GOVERNMENT OF TELANGANA — Telangana Livestock Development Agency (TGLDA)</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <style>
         :root {
@@ -134,14 +136,19 @@
           z-index: 999;
         }
 
-        .nav-inner {
-          display: flex;
-          gap: 18px;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-        }
+       .nav-inner{
 
+    width:100%;
+    max-width:1400px;
+
+    margin:0 auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:18px;
+}
         .nav-links a {
           color: var(--white);
           padding: 10px 18px;
@@ -153,7 +160,43 @@
           align-items: center;
           transition: all 0.3s ease;
         }
+.login-icon{
 
+    position:absolute;
+
+    right:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#fff;
+    text-decoration:none;
+
+    border-radius:50%;
+
+    transition:.3s;
+}
+
+.login-icon i{
+    font-size:20px;
+}
+
+.login-icon:hover{
+
+    background:rgba(255,255,255,.18);
+
+    color:#ffd54f;
+
+    transform:translateY(-50%) scale(1.12);
+}
         .nav-links a::after {
           content: "";
           position: absolute;
@@ -218,32 +261,97 @@
           pointer-events: auto;
         }
 
-        .hero {
-          max-width: 1100px;
-          margin: 50px auto;
-          padding: 40px;
-          background: var(--white);
-          border-radius: 16px;
-          box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-          text-align: center;
-          animation: fadeUp 1s ease;
-        }
+  .hero{
+    position: relative;
+    overflow: hidden;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 15px 25px 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.08);
+    text-align: center;
+}
 
-        .hero h1 {
-          font-family: 'Montserrat', sans-serif;
-          font-size: 26px;
-          color: var(--green);
-          margin-bottom: 10px;
-        }
+.hero-banner{
+    width:96%;
+    height:350px;
+    object-fit:cover;
+    object-position:center -150px;   /* move image up */
+    border-radius:16px;
+}
 
-        .hero p {
-          font-size: 15px;
-          color: #333;
-          line-height: 1.6;
-          margin-bottom: 20px;
-        }
+.hero h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    color: var(--green);
+    margin-bottom: 10px;
+}
 
-        footer {
+.hero p{
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* TEXT */
+
+.hero-text{
+    position:absolute;
+    top:92px;
+    left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    text-align:center;
+    z-index:5;
+    pointer-events:none;
+}
+
+.hero-text h2{
+    margin:0;
+    font-family:'Montserrat',sans-serif;
+    font-size:46px;
+    font-weight:800;
+    line-height:1;
+    letter-spacing:2px;
+    color:#0b6623;
+
+    text-shadow:
+        0 2px 8px rgba(255,255,255,.95),
+        0 0 12px rgba(255,255,255,.8);
+}
+
+.of-line{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:16px;
+    margin:6px 0;
+}
+
+.of-line h3{
+    margin:0;
+    font-size:24px;
+    font-weight:700;
+    letter-spacing:3px;
+    color:#0b6623;
+
+    text-shadow:
+        0 2px 8px rgba(255,255,255,.95);
+}
+
+.of-line span{
+    width:75px;
+    height:2px;
+    border-radius:20px;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #0b6623,
+        transparent
+    );
+}     footer {
           background: var(--green);
           color: var(--white);
           text-align: center;
@@ -257,7 +365,8 @@
         @keyframes fadeDown { from { opacity: 0; transform: translateY(-25px); } to { opacity: 1; transform: translateY(0); } }
 
         @media (max-width: 900px) {
-          .hero { margin: 25px; padding: 28px; }
+          .hero {
+          margin: 25px; padding: 28px; }
           .agency { font-size: 16px; }
         }
         .leaders-section{
@@ -342,66 +451,6 @@
     color:#555;
     line-height:1.5;
 }
-.hero{
-    position:relative;
-    overflow:hidden;
-
-    max-width:1100px;
-    margin:40px auto;
-
-    padding:40px 40px 40px;
-
-    background:#fff;
-    border-radius:16px;
-
-    box-shadow:0 10px 40px rgba(0,0,0,.08);
-
-    text-align:center;
-}
-
-/* ANIMAL IMAGE */
-.hero::before{
-    content:'';
-    position:absolute;
-
-    left:0;
-    right:0;
-    top:100px;
-
-    height:340px;
-
-    background:url('/Animal.jpg') center center no-repeat;
-
-    background-size:85% auto;
-
-    opacity:1;
-
-    z-index:0;
-}
-
-/* KEEP ALL CONTENT ABOVE IMAGE */
-.hero > *{
-    position:relative;
-    z-index:1;
-}
-
-/* WELCOME HEADING */
-.hero h1{
-    font-family:'Montserrat',sans-serif;
-    font-size:26px;
-    color:#0b6623;
-
-    margin-bottom:12px;
-}
-
-/* DESCRIPTION */
-.hero p{
-    font-size:15px;
-    color:#333;
-    line-height:1.6;
-
-    margin-bottom:180px; /* space for animals */
-}
 
 /* ACTIVITIES TITLE */
 .activity-title{
@@ -450,30 +499,44 @@
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:15px;
-    flex-wrap:wrap;
+    gap:10px;
+    flex-wrap:nowrap;
     margin-top:20px;
 }
+
 .footer-links a{
     text-decoration:none;
     color:#0b6623;
     font-weight:600;
-    font-size:15px;
-    padding:12px 22px;
-    background:rgba(255,255,255,0.85);
-    border:1px solid rgba(11,102,35,0.25);
+    font-size:14px;
+    padding:10px 16px;
+    background:rgba(255,255,255,0.90);
+    border:1px solid rgba(11,102,35,0.20);
     border-radius:30px;
-    backdrop-filter:blur(8px);
     box-shadow:0 4px 12px rgba(0,0,0,0.08);
     transition:all .3s ease;
+    white-space:nowrap;
 }
 
 .footer-links a:hover{
     background:linear-gradient(135deg,#0b6623,#1a73e8);
     color:#fff;
     transform:translateY(-3px);
-    box-shadow:0 8px 20px rgba(26,115,232,0.25);
-}.site-footer{
+}
+
+.footer-btn{
+    background:linear-gradient(135deg,#0b6623,#1a73e8);
+    color:#fff;
+    border:none;
+    padding:10px 16px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
+    white-space:nowrap;
+}
+
+.site-footer{
     background:#0b6623;
     color:#fff;
     padding:15px 30px;
@@ -492,10 +555,9 @@
 .footer-right{
     text-align:right;
     font-size:13px;
-    line-height:1;
+    line-height:1.4;
     opacity:.95;
 }
-
 
 .footer-right strong{
     color:#ffd54f;
@@ -644,6 +706,8 @@
    IMPORTANT LINKS DROPDOWN
 ========================== */
 
+/* IMPORTANT LINKS DROPDOWN */
+
 .footer-dropdown{
     position:relative;
     display:inline-block;
@@ -653,86 +717,118 @@
     background:linear-gradient(135deg,#0b6623,#1a73e8);
     color:#fff;
     border:none;
-    outline:none;
-    cursor:pointer;
-
     padding:12px 28px;
     border-radius:30px;
-
     font-size:15px;
     font-weight:700;
+    cursor:pointer;
 
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:all .35s ease;
+    box-shadow:0 8px 25px rgba(26,115,232,.25);
 }
+
 .footer-btn:hover{
-    transform:translateY(-2px);
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(26,115,232,.35);
 }
+
+/* DROPDOWN */
 
 .footer-dropdown-content{
     position:absolute;
-
-    top:100%;
+    top:110%;
     left:50%;
+    transform:translateX(-50%) translateY(15px);
 
-    transform:translateX(-50%);
+    min-width:340px;
+    width:max-content;
 
-    margin-top:8px;
+    background:#fff;
+    border-radius:18px;
 
-    width:200px;
-
-    background:#ffffff;
-
-    border-radius:14px;
-
-    box-shadow:0 15px 40px rgba(0,0,0,.18);
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.15),
+        0 5px 20px rgba(0,0,0,.08);
 
     overflow:hidden;
 
     opacity:0;
     visibility:hidden;
 
-    z-index:99999;
+    transition:
+        opacity .35s ease,
+        transform .35s ease;
 
-    transition:.25s ease;
+    z-index:99999;
 }
+
+/* SHOW EFFECT */
 
 .footer-dropdown:hover .footer-dropdown-content{
     opacity:1;
     visibility:visible;
+    transform:translateX(-50%) translateY(0);
 }
 
+/* LINKS */
+
 .footer-dropdown-content a{
-    display:block;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-    padding:16px 20px;
+    padding:16px 25px;
 
-    background:#ffffff !important;
-    color:#222 !important;
-
+    color:#333;
     text-decoration:none;
-    font-size:13px;
+
+    font-size:14px;
     font-weight:600;
 
-    margin:0 !important;
+    white-space:nowrap;
 
-    border:none !important;
-    border-radius:0 !important;
-    box-shadow:none !important;
+    border-bottom:1px solid #f0f0f0;
 
-    border-bottom:1px solid #ececec !important;
-
-    transition:all .25s ease;
+    transition:all .3s ease;
 }
 
 .footer-dropdown-content a:last-child{
-    border-bottom:none !important;
+    border-bottom:none;
 }
 
 .footer-dropdown-content a:hover{
-    background:#f4f8ff !important;
-    color:#0b6623 !important;
-    padding-left:28px;
-}  </style>
+    background:linear-gradient(
+        90deg,
+        rgba(11,102,35,.08),
+        rgba(26,115,232,.08)
+    );
+
+    color:#0b6623;
+
+    transform:translateX(8px);
+    padding-left:35px;
+}
+
+/* ARROW */
+
+.footer-dropdown-content::before{
+    content:'';
+    position:absolute;
+
+    top:-8px;
+    left:50%;
+
+    width:16px;
+    height:16px;
+
+    background:#fff;
+
+    transform:
+        translateX(-50%)
+        rotate(45deg);
+
+    box-shadow:-3px -3px 10px rgba(0,0,0,.03);
+} </style>
 </head>
 
 <body>
@@ -742,7 +838,8 @@
 <header class="site-header">
 
     <div class="header-left">
-        <img src="/Goi.jpg" class="corner-logo">
+        <img src="/Govt.jpg.png" class="corner-logo">
+
 
         <div class="top-person">
             <img src="/cm.jpg.png">
@@ -774,15 +871,17 @@
             <span>Sri Hon'ble Deputy Chief Minister</span>
         </div>
 
-        <img src="/Govt.jpg.png" class="corner-logo">
+        <img src="/Goi.jpg" class="corner-logo">
 
     </div>
     </div>
 </header>
 <nav>
+
     <div class="nav-inner nav-links">
 
         <a href="/">HOME</a>
+
         <a href="#">ANIMAL BREEDING</a>
 
         <div class="dropdown">
@@ -803,12 +902,16 @@
 
         <a href="#">CIRCULARS & GO's</a>
         <a href="#">OUR TEAM</a>
-        <!-- changed this link -->
-        <a href="contact" style="background:#fff; color:var(--green); border-radius:8px;">CONTACT</a>
-        <a href="#" style="background:#fff; color:var(--green); border-radius:8px;">CEO LOGIN</a>
-        <a href="#" style="background:#fff; color:var(--green); border-radius:8px;">CHAIRMAN / CEOs</a>
+        <a href="#">SAVE GO-MATHA</a>
+        <a href="contact">CONTACT</a>
+
 
     </div>
+
+    <a href="/login" class="login-icon" title="CEO Login">
+        <i class="fas fa-user-lock"></i>
+    </a>
+
 </nav>
 <div class="home-layout">
 
@@ -832,12 +935,22 @@
             The Telangana Livestock Development Agency (TGLDA) serves as a centralized platform for
             the Animal Breeding & Veterinary Department.
         </p>
-        <h2 class="activity-title">
-            <span>ACTIVITIES</span>
-            <span>OF</span>
-            <span>TGLDA</span>
-        </h2>
 
+        <div class="hero-image">
+            <img src="/Animal.jpg.png" class="hero-banner">
+
+            <div class="hero-text">
+                <h2>ACTIVITIES</h2>
+
+                <div class="of-line">
+                    <span></span>
+                    <h3>OF</h3>
+                    <span></span>
+                </div>
+
+                <h2>TGLDA</h2>
+            </div>
+        </div>
         <div class="activities-grid">
 
             <div class="activity-card">
@@ -909,10 +1022,13 @@
         <a href="#">TGLDA Schemes</a>
         <a href="#">Privacy Policy</a>
         <a href="#">Terms & Conditions</a>
+        <a href="https://www.google.com/maps/place/A+P+Live+Stock+Development+Agency/@17.3998277,78.4542467,21z/data=!4m6!3m5!1s0x3bcb91b971555555:0x380c03ce7277efb!8m2!3d17.399837!4d78.454363!16s%2Fg%2F1v1tljwg?entry=ttu" target="_blank">
+            Find Us On Map
+        </a>
 
     <div class="footer-dropdown">
         <button class="footer-btn">
-            IMPORTANT LINKS ▼
+            Important Links ▾
         </button>
 
         <div class="footer-dropdown-content">
@@ -932,9 +1048,8 @@
         </div>
 
     </div>
-     <a href="https://www.google.com/maps/place/A+P+Live+Stock+Development+Agency/@17.3998277,78.4542467,21z/data=!4m6!3m5!1s0x3bcb91b971555555:0x380c03ce7277efb!8m2!3d17.399837!4d78.454363!16s%2Fg%2F1v1tljwg?entry=ttu" target="_blank">
-        Find Us On Map
-    </a>
+    </div>
+
 </section>
 
 <footer class="site-footer">
