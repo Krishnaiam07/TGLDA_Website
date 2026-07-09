@@ -1,0 +1,533 @@
+<head>
+
+<style>
+    :root {
+      --green: #0b6623;
+      --blue: #1a73e8;
+      --orange: #ffb703;
+      --white: #ffffff;
+      --text: #122028;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+   body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(180deg,#f3fff3 0%,#f9fbff 100%);
+    color:var(--text);
+    overflow-x:hidden;
+
+    padding-top:165px;
+}
+
+    .top-bar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:10px;
+    background:linear-gradient(90deg,#138808 0%,#ffffff 50%,#1a73e8 100%);
+    animation:hue 10s infinite linear;
+    z-index:99999;
+}
+    @keyframes hue { 0% { filter: hue-rotate(0deg); } 100% { filter: hue-rotate(360deg); }}
+
+
+.site-header{
+    position:fixed;
+    top:10px;
+    left:0;
+    width:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:10px 20px;
+    background:#fff;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+
+    z-index:99998;
+}
+
+.header-left{
+display:flex;
+align-items:center;
+gap:12px;
+width:260px;
+}
+
+.header-right{
+display:flex;
+align-items:center;
+gap:12px;
+width:260px;
+justify-content:flex-end;
+}
+
+.corner-logo{
+width:80px;
+height:80px;
+object-fit:contain;
+}
+
+.top-person{
+display:flex;
+flex-direction:column;
+align-items:center;
+text-align:center;
+}
+
+.top-person img{
+width:70px;
+height:85px;
+object-fit:cover;
+border-radius:6px;
+border:2px solid #e5e5e5;
+}
+
+.top-person span{
+font-size:10px;
+font-weight:600;
+color:#0b6623;
+margin-top:4px;
+line-height:1.2;
+}
+
+.header-center-row{
+flex:1;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+}
+
+.center-logo{
+width:85px;
+height:85px;
+object-fit:contain;
+}
+
+.brand{
+text-align:center;
+}
+
+.gov{
+font-family:'Montserrat',sans-serif;
+font-size:32px;
+font-weight:900;
+color:#0b6623;
+white-space:nowrap;
+letter-spacing:1px;
+line-height:1.1;
+}
+
+.agency{
+color:#1a73e8;
+}
+
+.brand strong{
+display:block;
+font-size:15px;
+color:#444;
+margin-top:5px;
+}
+nav{
+    position:fixed;
+    top:110px;
+    left:0;
+    width:100%;
+
+    background:linear-gradient(90deg,#0b6623,#1a73e8);
+
+    padding:14px 20px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+
+    z-index:99997;
+}
+  .nav-inner{
+    width:100%;
+    max-width:1400px;
+    margin:0 auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:nowrap;
+
+    gap:8px;
+
+    height:auto;
+}
+   .nav-links a{
+    color:#fff;
+    text-decoration:none;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:14px 18px;
+
+    font-size:16px;
+    font-weight:600;
+    line-height:1;
+
+    white-space:nowrap;
+
+    position:relative;
+
+    border-radius:6px;
+
+    transition:all .3s ease;
+}
+.login-icon{
+
+position:absolute;
+
+right:18px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+width:42px;
+height:42px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+color:#fff;
+text-decoration:none;
+
+border-radius:50%;
+
+transition:.3s;
+}
+
+.login-icon i{
+font-size:20px;
+}
+
+.login-icon:hover{
+
+background:rgba(255,255,255,.18);
+
+color:#ffd54f;
+
+transform:translateY(-50%) scale(1.12);
+}
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 3px;
+      background: var(--orange);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after { width: 100%; }
+
+    .dropdown{
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+
+.dropdown > a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:14px 18px;
+
+    color:#fff;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:600;
+    line-height:1;
+
+    position:relative;
+}
+    .dropdown-content {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: var(--white);
+      min-width: 210px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.25s ease;
+      z-index: 9999;
+      pointer-events: none;
+    }
+
+    .dropdown-content a {
+      color: var(--text);
+      text-decoration: none;
+      padding: 12px 16px;
+      display: block;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background: linear-gradient(90deg, var(--green), var(--blue));
+      color: var(--white);
+      transform: scale(1.02);
+    }
+
+    .dropdown:hover .dropdown-content {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+/*=========================================
+  SAVE GO MATHA BACKGROUND SECTION
+=========================================*/
+
+.savegomatha-hero{
+
+position:relative;
+
+min-height:calc(100vh - 165px);
+
+background:
+    linear-gradient(
+        rgba(255,255,255,.55),
+        rgba(255,255,255,.60)
+    ),
+    url("/saveGomatha.jpg.png");
+
+background-size:cover;
+
+background-position:center 120px;
+
+background-repeat:no-repeat;
+
+background-attachment:fixed;
+
+display:flex;
+
+justify-content:center;
+
+align-items:flex-start;
+
+padding:70px 40px;
+
+}
+
+/* Content */
+
+.savegomatha-content{
+
+width:100%;
+max-width:1050px;
+text-align:center;
+z-index:2;
+
+}
+
+/* Heading */
+
+.savegomatha-content h1{
+
+font-family:'Cinzel',serif;
+
+font-size:54px;
+
+font-weight:700;
+
+color:#9b6900;
+
+margin-bottom:28px;
+
+text-shadow:
+    0 2px 10px rgba(255,255,255,.95),
+    0 1px 3px rgba(0,0,0,.18);
+
+}
+/* Paragraph */
+
+.savegomatha-content p{
+
+max-width:900px;
+margin:auto;
+
+font-size:20px;
+line-height:1.9;
+
+color:#2b2b2b;
+
+background:rgba(255,255,255,.42);
+
+backdrop-filter:blur(6px);
+
+border-radius:18px;
+
+padding:28px 34px;
+
+box-shadow:0 8px 24px rgba(0,0,0,.08);
+
+}.donate-btn{
+
+display:inline-block;
+
+margin-left:18px;
+
+padding:10px 22px;
+
+background:linear-gradient(135deg,#ff9800,#d97706);
+
+color:#fff;
+
+text-decoration:none;
+
+font-size:18px;
+
+font-weight:700;
+
+border-radius:30px;
+
+box-shadow:0 6px 15px rgba(0,0,0,.18);
+
+transition:.3s ease;
+
+vertical-align:middle;
+
+}
+
+.donate-btn:hover{
+
+background:linear-gradient(135deg,#d97706,#b45309);
+
+transform:translateY(-2px);
+
+box-shadow:0 10px 20px rgba(0,0,0,.22);
+
+}
+ </style>
+</head>
+<body>
+
+<div class="top-bar"></div>
+
+<header class="site-header">
+
+    <div class="header-left">
+        <img src="/Govt.jpg.png" class="corner-logo">
+
+
+        <div class="top-person">
+            <img src="/cm.jpg.png">
+            <span>Sri Hon'ble Chief Minister</span>
+        </div>
+    </div>
+
+    <div class="header-center-row">
+
+        <img src="/Tglda.jpg.png" class="center-logo">
+
+        <div class="brand">
+            <div class="gov">
+                TELANGANA LIVESTOCK DEVELOPMENT AGENCY
+                <span class="agency">- (TGLDA)</span>
+            </div>
+
+            <strong>
+                Department of Animal Husbandry, Government of Telangana
+            </strong>
+        </div>
+
+    </div>
+
+    <div class="header-right">
+
+        <div class="top-person">
+            <img src="/dep.jpg.png">
+            <span>Sri Hon'ble Deputy Chief Minister</span>
+        </div>
+
+        <img src="/Goi.jpg" class="corner-logo">
+
+    </div>
+    </div>
+</header>
+<nav>
+
+    <div class="nav-inner nav-links">
+
+        <a href="/">HOME</a>
+
+        <a href="#">ANIMAL BREEDING</a>
+
+        <div class="dropdown">
+            <a href="#">FSBS</a>
+            <div class="dropdown-content">
+                <a href="/login">FSBS – Karimnagar</a>
+                <a href="/login">FSBS – Kamsanpalle</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="#">MEDIA</a>
+            <div class="dropdown-content">
+                <a href="/photo-gallery">Photo Gallery</a>
+                <a href="#">Video Gallery</a>
+            </div>
+        </div>
+
+        <a href="#">CIRCULARS & GO's</a>
+        <a href="#">OUR TEAM</a>
+        <a href="saveGomatha">SAVE GO MATHA</a>
+        <a href="contact">CONTACT</a>
+
+
+    </div>
+
+    <a href="/login" class="login-icon" title="CEO Login">
+        <i class="fas fa-user-lock"></i>
+    </a>
+
+</nav>
+<section class="savegomatha-hero">
+
+    <div class="savegomatha-content">
+
+        <h1>
+            Save Go Matha
+            <a href="#" class="donate-btn">Donate Now</a>
+        </h1>
+
+        <p>
+           Protecting Go Matha, Empowering Farmers
+
+            India is home to one of the world's largest livestock populations, and cattle play a vital role in supporting rural livelihoods, nutrition, and the nation's dairy economy. Through the Bharat Pashudhan digital platform, over 35 crore animals have been registered, with more than 13 crore breeding services and 135 crore vaccinations recorded across the country, strengthening livestock traceability and healthcare.
+
+            In Telangana, the Animal Husbandry Department serves millions of livestock through an extensive veterinary network comprising 2,160 veterinary institutions, 1,334 Gopalamitra centres, mobile veterinary clinics, diagnostic laboratories, and frozen semen depots. The state also has an estimated 42.3 lakh cattle, 42.2 lakh buffaloes, 1.90 crore sheep, and 49.3 lakh goats, reflecting the importance of livestock to rural families and the state's economy.
+
+            The Telangana Livestock Development Agency (TGLDA) is dedicated to conserving indigenous cattle, improving breed quality through scientific breeding, artificial insemination, sex-sorted semen, embryo transfer technologies, and providing quality frozen semen. Working through District Livestock Development Agencies, Executive Officers, veterinarians, Gopalamitras, and trained field staff, TGLDA delivers doorstep breeding and reproductive healthcare services to farmers, helping increase milk production, improve animal health, reduce infertility, and strengthen sustainable livestock farming across Telangana.
+
+            How Every Citizen Can Help Save Go Matha
+
+            Protecting cattle is a shared responsibility. Farmers and citizens can contribute by ensuring proper nutrition, clean drinking water, timely vaccination, deworming, regular health check-ups, scientific breeding, avoiding abandonment of cattle, and seeking veterinary assistance whenever required. Every healthy cow supports a farming family, improves milk production, preserves valuable indigenous breeds, and contributes to a stronger rural economy. Together, by caring for Go Matha with compassion and responsibility, we can build a healthier livestock population and a prosperous future for Telangana.
+        </p>
+
+    </div>
+
+</section>
+</body>

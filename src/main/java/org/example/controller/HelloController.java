@@ -30,4 +30,13 @@ public class HelloController {
     public String photoGallery() {
         return "photo-gallery";
     }
+
+    @GetMapping("/about")
+    public String about() {
+        return "about";
+    }
+    @GetMapping("/saveGomatha")
+    public String saveGomatha() {
+        return "saveGomatha";
+    }
 }
