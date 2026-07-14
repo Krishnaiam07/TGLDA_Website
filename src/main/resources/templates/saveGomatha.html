@@ -1,6 +1,6 @@
 <head>
 
-<style>
+    <style>
     :root {
       --green: #0b6623;
       --blue: #1a73e8;
@@ -17,38 +17,49 @@
     color:var(--text);
     overflow-x:hidden;
 
+    /* Important */
     padding-top:165px;
 }
 
     .top-bar{
+
     position:fixed;
     top:0;
     left:0;
     width:100%;
     height:10px;
+
     background:linear-gradient(90deg,#138808 0%,#ffffff 50%,#1a73e8 100%);
     animation:hue 10s infinite linear;
-    z-index:99999;
-}
-    @keyframes hue { 0% { filter: hue-rotate(0deg); } 100% { filter: hue-rotate(360deg); }}
 
+    z-index:99999;
+
+}
 
 .site-header{
+
     position:fixed;
+
     top:10px;
+
     left:0;
+
     width:100%;
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
     padding:10px 20px;
+
     background:#fff;
 
     box-shadow:0 3px 12px rgba(0,0,0,.08);
 
     z-index:99998;
+
 }
 
 .header-left{
@@ -133,201 +144,204 @@ font-size:15px;
 color:#444;
 margin-top:5px;
 }
-nav{
-    position:fixed;
-    top:110px;
-    left:0;
-    width:100%;
+ /*==========================
+        NAVIGATION
+==========================*/
 
-    background:linear-gradient(90deg,#0b6623,#1a73e8);
+nav {
+    background: linear-gradient(90deg, var(--green), var(--blue));
+    padding: 14px 20px;
 
-    padding:14px 20px;
+    display: flex;
+    justify-content: center;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    position: fixed;
+    top: 110px;
+    left: 0;
+    width: 100%;
 
-    box-shadow:0 8px 20px rgba(0,0,0,.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 
-    z-index:99997;
-}
-  .nav-inner{
-    width:100%;
-    max-width:1400px;
-    margin:0 auto;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-wrap:nowrap;
-
-    gap:8px;
-
-    height:auto;
-}
-   .nav-links a{
-    color:#fff;
-    text-decoration:none;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    padding:14px 18px;
-
-    font-size:16px;
-    font-weight:600;
-    line-height:1;
-
-    white-space:nowrap;
-
-    position:relative;
-
-    border-radius:6px;
-
-    transition:all .3s ease;
-}
-.login-icon{
-
-position:absolute;
-
-right:18px;
-
-top:50%;
-
-transform:translateY(-50%);
-
-width:42px;
-height:42px;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-color:#fff;
-text-decoration:none;
-
-border-radius:50%;
-
-transition:.3s;
+    z-index: 99997;
 }
 
-.login-icon i{
-font-size:20px;
+/* Center Navigation */
+/* Center Navigation */
+
+.nav-inner {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+
+    /* Move ONLY the menu buttons slightly downward */
+    transform: translateY(10px);
+}
+/* Menu Links */
+
+.nav-links a {
+    color: var(--white);
+
+    padding: 10px 18px;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    transition: all 0.3s ease;
 }
 
-.login-icon:hover{
+/* Hover Underline */
 
-background:rgba(255,255,255,.18);
+.nav-links a::after {
+    content: "";
 
-color:#ffd54f;
+    position: absolute;
 
-transform:translateY(-50%) scale(1.12);
-}
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 3px;
-      background: var(--orange);
-      transition: width 0.3s ease;
-    }
+    left: 0;
 
-    .nav-links a:hover::after { width: 100%; }
+    bottom: 0;
 
-    .dropdown{
-    position:relative;
-    display:flex;
-    align-items:center;
+    width: 0;
+
+    height: 3px;
+
+    background: var(--orange);
+
+    transition: width 0.3s ease;
 }
 
-.dropdown > a{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    padding:14px 18px;
-
-    color:#fff;
-    text-decoration:none;
-    font-size:16px;
-    font-weight:600;
-    line-height:1;
-
-    position:relative;
+.nav-links a:hover::after {
+    width: 100%;
 }
-    .dropdown-content {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: var(--white);
-      min-width: 210px;
-      border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(10px);
-      transition: all 0.25s ease;
-      z-index: 9999;
-      pointer-events: none;
-    }
 
-    .dropdown-content a {
-      color: var(--text);
-      text-decoration: none;
-      padding: 12px 16px;
-      display: block;
-      font-size: 14px;
-      transition: all 0.3s ease;
-    }
+/* Dropdown */
 
-    .dropdown-content a:hover {
-      background: linear-gradient(90deg, var(--green), var(--blue));
-      color: var(--white);
-      transform: scale(1.02);
-    }
+.dropdown {
+    position: relative;
 
-    .dropdown:hover .dropdown-content {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-      pointer-events: auto;
-    }
+    display: inline-block;
+}
 
-/*=========================================
-  SAVE GO MATHA BACKGROUND SECTION
+.dropdown > a::after {
+    content: "▾";
+
+    font-size: 12px;
+
+    margin-left: 6px;
+
+    position: relative;
+
+    top: 1px;
+}
+
+/* Dropdown Content */
+
+.dropdown-content {
+    position: absolute;
+
+    top: 100%;
+
+    left: 0;
+
+    background: var(--white);
+
+    min-width: 210px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition: all 0.25s ease;
+
+    z-index: 9999;
+
+    pointer-events: none;
+}
+
+.dropdown-content a {
+    color: var(--text);
+
+    text-decoration: none;
+
+    padding: 12px 16px;
+
+    display: block;
+
+    font-size: 14px;
+
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background: linear-gradient(90deg, var(--green), var(--blue));
+
+    color: var(--white);
+
+    transform: scale(1.02);
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+    pointer-events: auto;
+}
+    /*=========================================
+      SAVE GO MATHA BACKGROUND SECTION
 =========================================*/
 
 .savegomatha-hero{
 
-position:relative;
+    position:relative;
 
-min-height:calc(100vh - 165px);
+    min-height:calc(100vh - 165px);
 
-background:
-    linear-gradient(
-        rgba(255,255,255,.55),
-        rgba(255,255,255,.60)
-    ),
-    url("/saveGomatha.jpg.png");
+    background:
+        linear-gradient(
+            rgba(255,255,255,.55),
+            rgba(255,255,255,.60)
+        ),
+        url("/saveGomatha.jpg.png");
 
-background-size:cover;
+    background-size:cover;
 
-background-position:center 120px;
+    background-position:center 120px;
 
-background-repeat:no-repeat;
+    background-repeat:no-repeat;
 
-background-attachment:fixed;
+    background-attachment:fixed;
 
-display:flex;
+    display:flex;
 
-justify-content:center;
+    justify-content:center;
 
-align-items:flex-start;
+    align-items:flex-start;
 
-padding:70px 40px;
+    padding:70px 40px;
 
 }
 
@@ -335,10 +349,10 @@ padding:70px 40px;
 
 .savegomatha-content{
 
-width:100%;
-max-width:1050px;
-text-align:center;
-z-index:2;
+    width:100%;
+    max-width:1050px;
+    text-align:center;
+    z-index:2;
 
 }
 
@@ -346,78 +360,78 @@ z-index:2;
 
 .savegomatha-content h1{
 
-font-family:'Cinzel',serif;
+    font-family:'Cinzel',serif;
 
-font-size:54px;
+    font-size:54px;
 
-font-weight:700;
+    font-weight:700;
 
-color:#9b6900;
+    color:#9b6900;
 
-margin-bottom:28px;
+    margin-bottom:28px;
 
-text-shadow:
-    0 2px 10px rgba(255,255,255,.95),
-    0 1px 3px rgba(0,0,0,.18);
+    text-shadow:
+        0 2px 10px rgba(255,255,255,.95),
+        0 1px 3px rgba(0,0,0,.18);
 
 }
 /* Paragraph */
 
 .savegomatha-content p{
 
-max-width:900px;
-margin:auto;
+    max-width:900px;
+    margin:auto;
 
-font-size:20px;
-line-height:1.9;
+    font-size:20px;
+    line-height:1.9;
 
-color:#2b2b2b;
+    color:#2b2b2b;
 
-background:rgba(255,255,255,.42);
+    background:rgba(255,255,255,.42);
 
-backdrop-filter:blur(6px);
+    backdrop-filter:blur(6px);
 
-border-radius:18px;
+    border-radius:18px;
 
-padding:28px 34px;
+    padding:28px 34px;
 
-box-shadow:0 8px 24px rgba(0,0,0,.08);
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
 
 }.donate-btn{
 
-display:inline-block;
+    display:inline-block;
 
-margin-left:18px;
+    margin-left:18px;
 
-padding:10px 22px;
+    padding:10px 22px;
 
-background:linear-gradient(135deg,#ff9800,#d97706);
+    background:linear-gradient(135deg,#ff9800,#d97706);
 
-color:#fff;
+    color:#fff;
 
-text-decoration:none;
+    text-decoration:none;
 
-font-size:18px;
+    font-size:18px;
 
-font-weight:700;
+    font-weight:700;
 
-border-radius:30px;
+    border-radius:30px;
 
-box-shadow:0 6px 15px rgba(0,0,0,.18);
+    box-shadow:0 6px 15px rgba(0,0,0,.18);
 
-transition:.3s ease;
+    transition:.3s ease;
 
-vertical-align:middle;
+    vertical-align:middle;
 
 }
 
 .donate-btn:hover{
 
-background:linear-gradient(135deg,#d97706,#b45309);
+    background:linear-gradient(135deg,#d97706,#b45309);
 
-transform:translateY(-2px);
+    transform:translateY(-2px);
 
-box-shadow:0 10px 20px rgba(0,0,0,.22);
+    box-shadow:0 10px 20px rgba(0,0,0,.22);
 
 }
  </style>
