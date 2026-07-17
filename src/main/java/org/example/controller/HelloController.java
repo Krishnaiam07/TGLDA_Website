@@ -39,4 +39,9 @@ public class HelloController {
     public String saveGomatha() {
         return "saveGomatha";
     }
+        @GetMapping("/video-gallery")
+        public String videoGallery() {
+            return "video-gallery";
+    }
+
 }
