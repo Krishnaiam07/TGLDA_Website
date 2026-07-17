@@ -1745,7 +1745,7 @@ main {
                 <!-- CHAIRMAN -->
 
                 <button
-                        class="hierarchy-item active"
+                        class="hierarchy-item "
                         onclick="showOfficerSection('chairman', this)"
                 >
 
@@ -1917,25 +1917,6 @@ main {
                         <i class="fas fa-chevron-right"></i>
                     </span>
 
-                </button>
-                <!-- ADMINISTRATIVE STAFF -->
-
-                <button
-                        class="hierarchy-item"
-                        onclick="showOfficerSection('administrative-staff', this)"
-                >
-    <span class="hierarchy-text">
-
-        <span class="hierarchy-name">
-            Administrative Staff
-        </span>
-
-        <span class="hierarchy-subtitle">
-            TGLDA Administration
-        </span>
-
-    </span>
-
                     <span class="hierarchy-arrow">
         <i class="fas fa-chevron-right"></i>
     </span>
@@ -2044,57 +2025,57 @@ main {
     const dldaData = {
 
         "Adilabad": {
-            name: "Executive Officer, Adilabad DLDA",
-            phone: "9999990001",
-            email: "eo.adilabad@tglda.gov.in"
+            name: "Dr.Rama rao, Adilabad DLDA",
+            phone: "7337396420",
+            email: "eoadilabad20@gmail.com"
         },
 
         "Karimnagar": {
-            name: "Executive Officer, Karimnagar DLDA",
-            phone: "9999990002",
-            email: "eo.karimnagar@tglda.gov.in"
+            name: "Dr.Sri devi, Karimnagar DLDA",
+            phone: "7013780473",
+            email: "eodldaknr@gmail.com"
         },
 
         "Khammam": {
-            name: "Executive Officer, Khammam DLDA",
-            phone: "9999990003",
-            email: "eo.khammam@tglda.gov.in"
+            name: "Dr.Kishore, Khammam DLDA",
+            phone: "9848745999",
+            email: "eodldakhammam@gmail.com"
         },
 
         "Mahabubnagar": {
-            name: "Executive Officer, Mahabubnagar DLDA",
-            phone: "9999990004",
-            email: "eo.mahabubnagar@tglda.gov.in"
+            name: "Dr.Ramesh, Mahabubnagar DLDA",
+            phone: "7702771499",
+            email: "dldambnr@gmail.com"
         },
 
         "Medak": {
-            name: "Executive Officer, Medak DLDA",
-            phone: "9999990005",
-            email: "eo.medak@tglda.gov.in"
+            name: "Dr.Prabhakar, Medak DLDA",
+            phone: "8897186470",
+            email: "eomedak@gmail.com"
         },
 
         "Nalgonda": {
-            name: "Executive Officer, Nalgonda DLDA",
-            phone: "9999990006",
-            email: "eo.nalgonda@tglda.gov.in"
+            name: "Dr.Rajashekar, Nalgonda DLDA",
+            phone: "8008204129",
+            email: "eonalgonda@gmail.com"
         },
 
         "Nizamabad": {
-            name: "Executive Officer, Nizamabad DLDA",
-            phone: "9999990007",
-            email: "eo.nizamabad@tglda.gov.in"
+            name: "Dr.Basawa reddy, Nizamabad DLDA",
+            phone: "9121216325",
+            email: "eodldanizamabad@gmail.com"
         },
 
         "Ranga Reddy": {
-            name: "Executive Officer, Ranga Reddy DLDA",
-            phone: "9999990008",
-            email: "eo.rangareddy@tglda.gov.in"
+            name: "Dr.Aruna sri, Ranga Reddy DLDA",
+            phone: "8978901719",
+            email: "eohyderabad@yahoo.com"
         },
 
         "Warangal": {
-            name: "Executive Officer, Warangal DLDA",
-            phone: "9999990009",
-            email: "eo.warangal@tglda.gov.in"
+            name: "Dr.Sampath rao, Warangal DLDA",
+            phone: "9963277720",
+            email: "dldaeowarangal@gmail.com"
         }
 
     };
@@ -2277,8 +2258,180 @@ main {
            OTHER SECTIONS
            TEMPORARY TEXT ONLY
         ===================================== */
+if (section === "chairman") {
 
-        const sectionTitles = {
+    content.innerHTML = `
+    <div class="eo-section">
+
+        <div class="eo-section-header">
+            <h2>Chairman</h2>
+            <p>Official details of the Chairman, Telangana Livestock Development Agency.</p>
+        </div>
+
+        <div class="eo-details-card" style="display:block;">
+
+            <div class="eo-details-header">
+                <h3>Dr. Singam Charan Kaushik</h3>
+                <span class="eo-badge">Chairman</span>
+            </div>
+
+            <p class="eo-detail-line">
+                <strong>Designation</strong>
+                <span>Chairman, TGLDA</span>
+            </p>
+              <p class="eo-detail-line">
+                <strong>Mobile</strong>
+                <span>9700061135</span>
+            </p>
+
+            <p class="eo-detail-line">
+                <strong>Tenure</strong>
+                <span>2026 – Present</span>
+            </p>
+
+            <p class="eo-detail-line">
+                <strong>Department</strong>
+                <span>Telangana Livestock Development Agency (TGLDA)</span>
+            </p>
+
+        </div>
+
+    </div>
+    `;
+
+    return;
+}
+       if (section === "ceo") {
+
+    content.innerHTML = `
+    <div class="eo-section">
+
+        <div class="eo-section-header">
+            <h2>Chief Executive Officer</h2>
+            <p>Official details of the Chief Executive Officer, Telangana Livestock Development Agency.</p>
+        </div>
+
+        <div class="eo-details-card" style="display:block;">
+
+            <div class="eo-details-header">
+                <h3>Dr. B.Subbarayudu</h3>
+                <span class="eo-badge">CEO</span>
+            </div>
+
+            <p class="eo-detail-line">
+                <strong>Designation</strong>
+                <span>Chief Executive Officer, TGLDA</span>
+            </p>
+
+            <p class="eo-detail-line">
+                <strong>Mobile</strong>
+                <span>9999999999</span>
+            </p>
+
+            <p class="eo-detail-line">
+                <strong>Tenure</strong>
+                <span>2026 – Present</span>
+            </p>
+
+            <p class="eo-detail-line">
+                <strong>Department</strong>
+                <span>Telangana Livestock Development Agency (TGLDA)</span>
+            </p>
+
+        </div>
+
+    </div>
+    `;
+
+    return;
+} if (section === "deputy-director") {
+
+    content.innerHTML = `
+    <div class="eo-section">
+
+        <div class="eo-section-header">
+            <h2>Deputy Director</h2>
+            <p>Official details of the Deputy Director, Telangana Livestock Development Agency.</p>
+        </div>
+
+        <div class="eo-details-card" style="display:block;">
+
+            <div class="eo-details-header">
+                <h3>Dr. V. Srinivas</h3>
+                <span class="eo-badge">Deputy Director</span>
+            </div>
+
+            <p class="eo-detail-line">
+                <strong>Designation</strong>
+                <span>Deputy Director, TGLDA</span>
+            </p>
+
+            <p class="eo-detail-line">
+                <strong>Mobile</strong>
+                <span>9989997598</span>
+            </p>
+
+            <p class="eo-detail-line">
+                <strong>Tenure</strong>
+                <span>2026 – Present</span>
+            </p>
+
+            <p class="eo-detail-line">
+                <strong>Department</strong>
+                <span>Telangana Livestock Development Agency (TGLDA)</span>
+            </p>
+
+        </div>
+
+    </div>
+    `;
+
+    return;
+}if (section === "vas") {
+
+    content.innerHTML = `
+    <div class="eo-section">
+
+        <div class="eo-section-header">
+            <h2>Veterinary Assistant Surgeons</h2>
+            <p>Veterinary Assistant Surgeons (VAS) working at Telangana Livestock Development Agency (TGLDA).</p>
+        </div>
+
+        <div class="eo-details-card" style="display:block;">
+
+
+            <p class="eo-detail-line">
+                <strong>VAS</strong>
+                <span>Dr. G. Srinivas  — 9676702907</span>
+            </p>
+
+            <p class="eo-detail-line">
+                <strong>VAS</strong>
+                <span>Dr. T. Srinivas  — 8978901265</span>
+            </p>
+
+            <p class="eo-detail-line">
+                <strong>VAS</strong>
+                <span>Dr. B. Jaya Sudha — 9121213726</span>
+            </p>
+
+            <p class="eo-detail-line">
+                <strong>VAS</strong>
+                <span>Dr. Anitha  — 8790997960</span>
+            </p>
+
+            <p class="eo-detail-line">
+                <strong>VAS</strong>
+                <span>Dr. Krishna Chaitanya  — 8639956649</span>
+            </p>
+
+        </div>
+
+    </div>
+    `;
+
+    return;
+}const sectionTitles = {
 
     "chairman":
         "Chairman",
@@ -2298,8 +2451,7 @@ main {
     "vas":
         "Veterinary Assistant Surgeons",
 
-    "administrative-staff":
-        "Administrative Staff",
+
 
     "supervisors":
         "Supervisors",
