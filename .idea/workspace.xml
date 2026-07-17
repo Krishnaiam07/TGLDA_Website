@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abb4efa3-397c-4b3b-bf9e-4638ee0feb05" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/downloads/Supervisor details_2026.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/gopalmithra.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/downloads/Gopal mithras_2026.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/Gopal mithras_2026.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/gopalmithra.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/gopalmithra.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +44,9 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="34XwyjkNkfCKbGaqvBseprRJTqB" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -82,8 +75,9 @@
       <recent name="C:\Users\Acer\IdeaProjects\Fsbstest\frontend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Acer\IdeaProjects\Fsbstest\src\main\resources\static" />
+      <recent name="C:\Users\Acer\IdeaProjects\Fsbstest\src\main\resources\static\manuals" />
       <recent name="C:\Users\Acer\IdeaProjects\Fsbstest\src\main\resources\static\downloads" />
+      <recent name="C:\Users\Acer\IdeaProjects\Fsbstest\src\main\resources\static" />
       <recent name="C:\Users\Acer\IdeaProjects\Fsbstest\src\main\resources\static\downloads\manuals" />
       <recent name="C:\Users\Acer\IdeaProjects\Fsbstest\src\main\resources\templates" />
     </key>
