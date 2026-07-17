@@ -43,5 +43,9 @@ public class HelloController {
         public String videoGallery() {
             return "video-gallery";
     }
+    @GetMapping("/gopalmithra")
+    public String gopalMithra() {
+        return "gopalmithra";
+    }
 
 }

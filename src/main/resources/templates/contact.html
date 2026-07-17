@@ -2445,6 +2445,37 @@ if (section === "chairman") {
     `;
 
     return;
+}if(section === "supervisors"){
+
+    content.innerHTML = `
+        <div class="eo-section">
+
+            <div class="eo-section-header">
+                <h2>Supervisor Details DLDA Wise</h2>
+                <p>
+                    Download the DLDA-wise Supervisor details.
+                </p>
+            </div>
+
+            <div class="eo-details-card" style="display:block;text-align:center;">
+
+                <h3 style="margin-bottom:20px;">
+                    DLDA Wise Supervisor List
+                </h3>
+
+                <a href="/downloads/Supervisor details_2026.xlsx"
+                   download
+                   class="download-btn">
+                    <i class="fas fa-download"></i>
+                    Download Excel
+                </a>
+
+            </div>
+
+        </div>
+    `;
+
+    return;
 }if(section === "gopalamitras"){
 
     content.innerHTML = `
