@@ -163,43 +163,6 @@
           align-items: center;
           transition: all 0.3s ease;
         }
-.login-icon{
-
-    position:absolute;
-
-    right:18px;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-    width:42px;
-    height:42px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    color:#fff;
-    text-decoration:none;
-
-    border-radius:50%;
-
-    transition:.3s;
-}
-
-.login-icon i{
-    font-size:20px;
-}
-
-.login-icon:hover{
-
-    background:rgba(255,255,255,.18);
-
-    color:#ffd54f;
-
-    transform:translateY(-50%) scale(1.12);
-}
         .nav-links a::after {
           content: "";
           position: absolute;
@@ -263,24 +226,64 @@
           transform: translateY(0);
           pointer-events: auto;
         }
+.login-icon{
 
-  .hero{
-    position: relative;
-    overflow: hidden;
-    max-width: 1100px;
-    margin: 20px auto;
-    padding: 15px 25px 20px;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 10px 40px rgba(0,0,0,.08);
-    text-align: center;
+    position:absolute;
+
+    right:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#fff;
+    text-decoration:none;
+
+    border-radius:50%;
+
+    transition:.3s;
 }
 
+.login-icon i{
+    font-size:20px;
+}
+
+.login-icon:hover{
+
+    background:rgba(255,255,255,.18);
+
+    color:#ffd54f;
+
+    transform:translateY(-50%) scale(1.12);
+}
+
+
+.hero{
+    width:100%;
+    background:#fff;
+    border-radius:18px;
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+    padding:20px;
+    text-align:center;
+    overflow:hidden;
+}.hero-image{
+    position:relative;
+    width:100%;
+    margin-top:18px;
+}
 .hero-banner{
-    width:96%;
-    height:350px;
+    width:100%;
+    display:block;
+    aspect-ratio:16/9;
     object-fit:cover;
-    object-position:center -150px;   /* move image up */
+    object-position:center;
     border-radius:16px;
 }
 
@@ -302,27 +305,24 @@
 
 .hero-text{
     position:absolute;
-    top:92px;
-    left:50%;
-    transform:translateX(-50%);
-    width:100%;
-    text-align:center;
-    z-index:5;
+    inset:0;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    transform:translateY(-100px);   /* adjust this value */
     pointer-events:none;
 }
 
 .hero-text h2{
     margin:0;
-    font-family:'Montserrat',sans-serif;
-    font-size:46px;
-    font-weight:800;
+    font-size:clamp(40px,4vw,72px);
+    font-weight:900;
     line-height:1;
-    letter-spacing:2px;
     color:#0b6623;
-
-    text-shadow:
-        0 2px 8px rgba(255,255,255,.95),
-        0 0 12px rgba(255,255,255,.8);
+    text-shadow:0 2px 8px rgba(255,255,255,.95);
 }
 
 .of-line{
@@ -335,13 +335,9 @@
 
 .of-line h3{
     margin:0;
-    font-size:24px;
+    font-size:clamp(22px,2vw,34px);
     font-weight:700;
-    letter-spacing:3px;
     color:#0b6623;
-
-    text-shadow:
-        0 2px 8px rgba(255,255,255,.95);
 }
 
 .of-line span{
@@ -383,25 +379,30 @@
 }
 
 .leader-card{
-    width:250px;
+    width:100%;
+    min-height:540px;
+
     background:#fff;
-    border-radius:15px;
-    padding:15px;
+    border-radius:18px;
+    padding:20px;
     text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,0.12);
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
 .leader-card img{
-    width:220px;
-    height:260px;
+    width:100%;
+    max-width:270px;
+    aspect-ratio:4/5;
+
     object-fit:cover;
     object-position:top;
-    border-radius:12px;
-    border:none;
+
     display:block;
     margin:auto;
-}
 
+    border-radius:14px;
+}
 .leader-card h3{
     margin-top:12px;
     font-size:18px;
@@ -414,17 +415,18 @@
     color:#555;
 }
 .home-layout{
+    max-width:1700px;
     width:100%;
-    margin:25px 0;
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap:0;
-    padding:0;
+    margin:25px auto;
+    padding:0 20px;
+
+    display:grid;
+    grid-template-columns:300px minmax(0,1fr) 300px;
+    gap:20px;
+    align-items:start;
 }
 .side-leaders{
-    width:320px;
-    flex-shrink:0;
+    width:100%;
 }
 .leader-card{
     width:100%;
@@ -543,18 +545,49 @@
     background:#0b6623;
     color:#fff;
     padding:15px 30px;
-    display:flex;
-    justify-content:space-between;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
     align-items:center;
-    flex-wrap:wrap;
     border-top:3px solid #ffffff20;
 }
 
 .footer-left{
-    font-size:15px;
-    font-weight:600;
+    justify-self:start;
 }
 
+.footer-center{
+    justify-self:center;
+    text-align:center;
+}
+
+.footer-right{
+    justify-self:end;
+    text-align:right;
+}
+.social-icons{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+}
+
+.social-icons a{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:#ffffff20;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:18px;
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    background:#fff;
+    color:#0b6623;
+}
 .footer-right{
     text-align:right;
     font-size:13px;
@@ -655,41 +688,28 @@
 
 .activities-grid{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
-    margin-top:18px;
+    grid-template-columns:repeat(2,minmax(250px,1fr));
+    gap:15px;
+    margin-top:25px;
 }
-
 /* CARD */
 
 .activity-card{
-
-    background:#ffffff;
-
-    border:1px solid #e7e7e7;
-
-    border-radius:12px;
-
-    height:72px;
-
-    padding:0 18px;
-
     display:flex;
-
     align-items:center;
+    gap:15px;
 
-    justify-content:center;
+    min-height:78px;
 
-    gap:14px;
+    padding:14px 18px;
 
-    cursor:pointer;
-
-    transition:all .25s ease;
+    background:#fff;
+    border:1px solid #e7e7e7;
+    border-radius:14px;
 
     box-shadow:0 3px 10px rgba(0,0,0,.05);
 
-    overflow:hidden;
-
+    transition:.3s;
 }
 
 /* ICON */
@@ -721,31 +741,13 @@
 }
 
 /* TITLE */
-
 .activity-card h3{
-
-    margin:0;
-
     flex:1;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
+    margin:0;
     text-align:center;
-
-    font-size:15px;
-
-    font-weight:600;
-
+    font-size:clamp(15px,1.1vw,19px);
+    line-height:1.3;
     color:#14532d;
-
-    line-height:1.2;
-
-    transition:.25s;
-
 }
 
 /* HOVER */
@@ -820,100 +822,54 @@
 
 }
 
-}/* FOOTER DROPDOWN */
-
-/* ===========================
-   IMPORTANT LINKS DROPDOWN
-=========================== */
+}
 
 /* ==========================
    IMPORTANT LINKS DROPDOWN
 ========================== */
-
-/* IMPORTANT LINKS DROPDOWN */
 
 .footer-dropdown{
     position:relative;
     display:inline-block;
 }
 
-.footer-btn{
-    background:linear-gradient(135deg,#0b6623,#1a73e8);
-    color:#fff;
-    border:none;
-    padding:12px 28px;
-    border-radius:30px;
-    font-size:15px;
-    font-weight:700;
-    cursor:pointer;
-
-    transition:all .35s ease;
-    box-shadow:0 8px 25px rgba(26,115,232,.25);
-}
-
-.footer-btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 12px 30px rgba(26,115,232,.35);
-}
-
-/* DROPDOWN */
-
 .footer-dropdown-content{
     position:absolute;
-    top:110%;
+    top:100%;              /* BELOW Important Links */
     left:50%;
-    transform:translateX(-50%) translateY(15px);
+    transform:translateX(-50%);
+    margin-top:6px;        /* Small gap below button */
 
-    min-width:340px;
-    width:max-content;
+    width:220px;
 
     background:#fff;
-    border-radius:18px;
-
-    box-shadow:
-        0 20px 50px rgba(0,0,0,.15),
-        0 5px 20px rgba(0,0,0,.08);
+    border:1px solid #d9d9d9;
+    border-radius:4px;
+    box-shadow:0 6px 15px rgba(0,0,0,.12);
 
     overflow:hidden;
-
     opacity:0;
     visibility:hidden;
-
-    transition:
-        opacity .35s ease,
-        transform .35s ease;
-
+    transition:.2s ease;
     z-index:99999;
 }
-
-/* SHOW EFFECT */
-
 .footer-dropdown:hover .footer-dropdown-content{
     opacity:1;
     visibility:visible;
-    transform:translateX(-50%) translateY(0);
 }
 
-/* LINKS */
-
 .footer-dropdown-content a{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    padding:16px 25px;
-
-    color:#333;
+    display:block;
+    padding:7px 12px;
     text-decoration:none;
-
-    font-size:14px;
-    font-weight:600;
-
-    white-space:nowrap;
-
-    border-bottom:1px solid #f0f0f0;
-
-    transition:all .3s ease;
+    color:#333;
+    font-size:13px;
+    font-weight:500;
+    background:transparent;
+    border:none;
+    border-radius:0;
+    box-shadow:none;
+    line-height:1.4;
 }
 
 .footer-dropdown-content a:last-child{
@@ -921,38 +877,62 @@
 }
 
 .footer-dropdown-content a:hover{
-    background:linear-gradient(
-        90deg,
-        rgba(11,102,35,.08),
-        rgba(26,115,232,.08)
-    );
-
+    background:#f5f5f5;
     color:#0b6623;
-
-    transform:translateX(8px);
-    padding-left:35px;
 }
 
-/* ARROW */
-
-.footer-dropdown-content::before{
-    content:'';
+.footer-dropdown-content::after{
+    content:"";
     position:absolute;
-
-    top:-8px;
     left:50%;
-
-    width:16px;
-    height:16px;
-
+    bottom:-6px;
+    transform:translateX(-50%) rotate(45deg);
+    width:10px;
+    height:10px;
     background:#fff;
+    border-right:1px solid #d9d9d9;
+    border-bottom:1px solid #d9d9d9;
+}
+ @media (max-width:1400px){
 
-    transform:
-        translateX(-50%)
-        rotate(45deg);
+.home-layout{
+    grid-template-columns:260px minmax(0,1fr) 260px;
+}
 
-    box-shadow:-3px -3px 10px rgba(0,0,0,.03);
-} </style>
+}
+
+@media (max-width:1200px){
+
+.home-layout{
+    grid-template-columns:1fr;
+}
+
+.side-leaders{
+    max-width:350px;
+    margin:auto;
+}
+
+.activities-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media (max-width:768px){
+
+.activities-grid{
+    grid-template-columns:1fr;
+}
+
+.hero-text h2{
+    font-size:34px;
+}
+
+.of-line h3{
+    font-size:20px;
+}
+
+}</style>
 </head>
 
 <body>
@@ -1081,10 +1061,16 @@
                 <h3>Veterinarian</h3>
             </div>
 
-            <div class="activity-card">
-                <span>📱</span>
-                <h3>Doorstep AI</h3>
-            </div>
+            <a href="https://play.google.com/store/apps/details?id=com.farmerpashudhan.production&hl=en_IN"
+               target="_blank"
+               style="text-decoration:none; color:inherit;">
+
+                <div class="activity-card">
+                    <span>📱</span>
+                    <h3>Doorstep AI</h3>
+                </div>
+
+            </a>
             <a href="https://bharatpashudhan.ndlm.co.in/keyStatistics?key=3&pageLabel=Breeding"
                target="_blank"
                style="text-decoration: none; color: inherit;">
@@ -1136,7 +1122,7 @@
 
         <div class="leader-card">
         <img src="/Chair.jpg" alt="Chairman">
-        <h3>Dr.Singam Charan Kaushik</h3>
+        <h3>Dr.Singam Charan Koushik</h3>
         <p>TGLDA Chairman</p>
     </div>
 
@@ -1168,19 +1154,22 @@
         </button>
 
         <div class="footer-dropdown-content">
+            <a href="https://www.telangana.gov.in/" target="_blank">
+                Telangana Official Website
+            </a>
+            <a href="https://vahd.telangana.gov.in/" target="_blank">
+                VAHD
+            </a>
 
             <a href="https://bharatpashudhan.ndlm.co.in/" target="_blank">
                 Bharat Pashudhan
             </a>
-
-            <a href="https://vahd.telangana.gov.in/" target="_blank">
-                Directorate of Animal Husbandry
+            <a href="https://sheepfed.telangana.gov.in/" target="_blank">
+                Sheep & Goat
             </a>
-
-            <a href="https://www.telangana.gov.in/" target="_blank">
-                Telangana Official Website
+            <a href="https://elaabh.telangana.gov.in/" target="_blank">
+                E-LAABH
             </a>
-
         </div>
 
     </div>
@@ -1192,6 +1181,17 @@
 
     <div class="footer-left">
         © 2026 Telangana Livestock Development Agency (TGLDA)
+    </div>
+
+    <div class="footer-center">
+        <strong>Follow Us On</strong>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
     </div>
 
     <div class="footer-right">

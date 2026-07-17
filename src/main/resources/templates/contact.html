@@ -1622,6 +1622,20 @@ main {
         gap: 5px;
     }
 
+}.download-btn{
+    display:inline-block;
+    background:#0b6623;
+    color:#fff;
+    padding:12px 24px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    margin-top:15px;
+    transition:.3s;
+}
+
+.download-btn:hover{
+    background:#1a73e8;
 }
     </style>
 </head>
@@ -2431,7 +2445,40 @@ if (section === "chairman") {
     `;
 
     return;
-}const sectionTitles = {
+}if(section === "gopalamitras"){
+
+    content.innerHTML = `
+        <div class="eo-section">
+
+            <div class="eo-section-header">
+                <h2>Gopalamitras</h2>
+                <p>
+                    Download the DLDA-wise Gopala mitras details.
+                </p>
+            </div>
+
+            <div class="eo-details-card" style="display:block;text-align:center;">
+
+                <h3 style="margin-bottom:20px;">
+                    DLDA Wise Gopala mitras List
+                </h3>
+
+                <a href="/downloads/Gopal mithras_2026.xlsx"
+                   download
+                   class="download-btn">
+                    <i class="fas fa-download"></i>
+                    Download Excel
+                </a>
+
+            </div>
+
+        </div>
+    `;
+
+    return;
+}
+
+const sectionTitles = {
 
     "chairman":
         "Chairman",
