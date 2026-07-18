@@ -1,105 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>GOVERNMENT OF TELANGANA — Telangana Livestock Development Agency (TGLDA)</title>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>GOVERNMENT OF TELANGANA — Telangana Livestock Development Agency (TGLDA)</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <style>
-        :root {
-          --green: #0b6623;
-          --blue: #1a73e8;
-          --orange: #ffb703;
-          --white: #ffffff;
-          --text: #122028;
-        }
+        <style>
+            :root {
+              --green: #0b6623;
+              --blue: #1a73e8;
+              --orange: #ffb703;
+              --white: #ffffff;
+              --text: #122028;
+            }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+            * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        body {
-          font-family: 'Poppins', sans-serif;
-          background: linear-gradient(180deg, #f3fff3 0%, #f9fbff 100%);
-          color: var(--text);
-          overflow-x: hidden;
-        }
+            body {
+              font-family: 'Poppins', sans-serif;
+              background: linear-gradient(180deg, #f3fff3 0%, #f9fbff 100%);
+              color: var(--text);
+              overflow-x: hidden;
+            }
 
-        .top-bar {
-          width: 100%;
-          height: 10px;
-          background: linear-gradient(90deg, #138808 0%, #ffffff 50%, #1a73e8 100%);
-          animation: hue 10s infinite linear;
-        }
-        @keyframes hue { 0% { filter: hue-rotate(0deg); } 100% { filter: hue-rotate(360deg); }}
+            .top-bar {
+              width: 100%;
+              height: 10px;
+              background: linear-gradient(90deg, #138808 0%, #ffffff 50%, #1a73e8 100%);
+              animation: hue 10s infinite linear;
+            }
+            @keyframes hue { 0% { filter: hue-rotate(0deg); } 100% { filter: hue-rotate(360deg); }}
 
-/* LEFT LOGO */
-.site-header{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:10px 20px;
-    background:#fff;
-}
+    /* LEFT LOGO */
+    .site-header{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        padding:10px 20px;
+        background:#fff;
+    }
 
-.header-left{
+   .header-left{
     display:flex;
     align-items:center;
     gap:12px;
-    width:260px;
+
+    flex:0 0 260px;   /* Replace width:260px */
 }
 
 .header-right{
     display:flex;
     align-items:center;
     gap:12px;
-    width:260px;
     justify-content:flex-end;
+
+    flex:0 0 260px;   /* Replace width:260px */
 }
 
-.corner-logo{
-    width:80px;
-    height:80px;
-    object-fit:contain;
-}
+    .corner-logo{
+        width:80px;
+        height:80px;
+        object-fit:contain;
+    }
 
-.top-person{
+    .top-person{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+
+    .top-person img{
+        width:70px;
+        height:85px;
+        object-fit:cover;
+        border-radius:6px;
+        border:2px solid #e5e5e5;
+    }.cm-image {
+         width: 105px !important;
+        height: 110px !important;
+    }.dep-image{
+        width:85px !important;
+        height:95px !important;
+    }
+
+    .top-person span{
+        font-size:10px;
+        font-weight:600;
+        color:#0b6623;
+        margin-top:4px;
+        line-height:1.2;
+    }
+
+ .header-center-row{
+    flex:1 1 auto;
+    min-width:0;
+
     display:flex;
     flex-direction:column;
     align-items:center;
-    text-align:center;
-}
-
-.top-person img{
-    width:70px;
-    height:85px;
-    object-fit:cover;
-    border-radius:6px;
-    border:2px solid #e5e5e5;
-}.cm-image {
-     width: 105px !important;
-    height: 110px !important;
-}
-
-.top-person span{
-    font-size:10px;
-    font-weight:600;
-    color:#0b6623;
-    margin-top:4px;
-    line-height:1.2;
-}
-
-.header-center-row{
-    flex:1;
-    display:flex;
-    align-items:center;
     justify-content:center;
-    gap:10px;
+}
+.center-goi{
+    margin-bottom:8px;   /* space between emblem and heading */
 }
 
-.center-logo{
+.center-goi img{
     width:85px;
     height:85px;
     object-fit:contain;
@@ -107,1107 +117,1133 @@
 
 .brand{
     text-align:center;
+    padding-top:0;
 }
+    .center-logo{
+        width:85px;
+        height:85px;
+        object-fit:contain;
+    }
 
-.gov{
+
+   .gov{
     font-family:'Montserrat',sans-serif;
-    font-size:32px;
+    font-size:clamp(24px,2vw,32px);
     font-weight:900;
     color:#0b6623;
-    white-space:nowrap;
     letter-spacing:1px;
-    line-height:1.1;
-}
+    line-height:1.15;
 
-.agency{
-    color:#1a73e8;
-}
-
-.brand strong{
-    display:block;
-    font-size:15px;
-    color:#444;
-    margin-top:5px;
-}
-     nav {
-          background: linear-gradient(90deg, var(--green), var(--blue));
-          padding: 14px 20px;
-          display: flex;
-          justify-content: center;
-          position: relative;
-          box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-          z-index: 999;
-        }
-
-       .nav-inner{
-
-    width:100%;
-    max-width:1400px;
-
-    margin:0 auto;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    gap:18px;
-}
-        .nav-links a {
-          color: var(--white);
-          padding: 10px 18px;
-          font-weight: 500;
-          text-decoration: none;
-          border-radius: 6px;
-          position: relative;
-          display: inline-flex;
-          align-items: center;
-          transition: all 0.3s ease;
-        }
-        .nav-links a::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          width: 0;
-          height: 3px;
-          background: var(--orange);
-          transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after { width: 100%; }
-
-        .dropdown {
-          position: relative;
-          display: inline-block;
-        }
-
-        .dropdown > a::after {
-          content: "▾";
-          font-size: 12px;
-          margin-left: 6px;
-          position: relative;
-          top: 1px;
-        }
-
-        .dropdown-content {
-          position: absolute;
-          top: 100%;
-          left: 0;
-          background: var(--white);
-          min-width: 210px;
-          border-radius: 10px;
-          box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-          opacity: 0;
-          visibility: hidden;
-          transform: translateY(10px);
-          transition: all 0.25s ease;
-          z-index: 9999;
-          pointer-events: none;
-        }
-
-        .dropdown-content a {
-          color: var(--text);
-          text-decoration: none;
-          padding: 12px 16px;
-          display: block;
-          font-size: 14px;
-          transition: all 0.3s ease;
-        }
-
-        .dropdown-content a:hover {
-          background: linear-gradient(90deg, var(--green), var(--blue));
-          color: var(--white);
-          transform: scale(1.02);
-        }
-
-        .dropdown:hover .dropdown-content {
-          opacity: 1;
-          visibility: visible;
-          transform: translateY(0);
-          pointer-events: auto;
-        }
-.login-icon{
-
-    position:absolute;
-
-    right:18px;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-    width:42px;
-    height:42px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    color:#fff;
-    text-decoration:none;
-
-    border-radius:50%;
-
-    transition:.3s;
-}
-
-.login-icon i{
-    font-size:20px;
-}
-
-.login-icon:hover{
-
-    background:rgba(255,255,255,.18);
-
-    color:#ffd54f;
-
-    transform:translateY(-50%) scale(1.12);
-}
-
-
-.hero{
-    width:100%;
-    background:#fff;
-    border-radius:18px;
-    box-shadow:0 10px 35px rgba(0,0,0,.08);
-    padding:20px;
+    white-space:normal;      /* remove nowrap */
     text-align:center;
-    overflow:hidden;
-}.hero-image{
-    position:relative;
-    width:100%;
-    margin-top:18px;
-}
-.hero-banner{
-    width:100%;
-    display:block;
-    aspect-ratio:16/9;
-    object-fit:cover;
-    object-position:center;
-    border-radius:16px;
+    word-break:normal;
 }
 
-.hero h1{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 26px;
-    color: var(--green);
-    margin-bottom: 10px;
-}
+    .agency{
+        color:#1a73e8;
+    }
 
-.hero p{
-    font-size: 15px;
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 0;
-}
+    .brand strong{
+        display:block;
+        font-size:15px;
+        color:#444;
+        margin-top:5px;
+    }
+         nav {
+              background: linear-gradient(90deg, var(--green), var(--blue));
+              padding: 14px 20px;
+              display: flex;
+              justify-content: center;
+              position: relative;
+              box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+              z-index: 999;
+            }
 
-/* TEXT */
+           .nav-inner{
 
-.hero-text{
-    position:absolute;
-    inset:0;
+        width:100%;
+        max-width:1400px;
 
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+        margin:0 auto;
 
-    transform:translateY(-100px);   /* adjust this value */
-    pointer-events:none;
-}
+        display:flex;
+        justify-content:center;
+        align-items:center;
 
-.hero-text h2{
-    margin:0;
-    font-size:clamp(40px,4vw,72px);
-    font-weight:900;
-    line-height:1;
-    color:#0b6623;
-    text-shadow:0 2px 8px rgba(255,255,255,.95);
-}
+        gap:18px;
+    }
+            .nav-links a {
+              color: var(--white);
+              padding: 10px 18px;
+              font-weight: 500;
+              text-decoration: none;
+              border-radius: 6px;
+              position: relative;
+              display: inline-flex;
+              align-items: center;
+              transition: all 0.3s ease;
+            }
+            .nav-links a::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 0;
+              height: 3px;
+              background: var(--orange);
+              transition: width 0.3s ease;
+            }
 
-.of-line{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:16px;
-    margin:6px 0;
-}
+            .nav-links a:hover::after { width: 100%; }
 
-.of-line h3{
-    margin:0;
-    font-size:clamp(22px,2vw,34px);
-    font-weight:700;
-    color:#0b6623;
-}
+            .dropdown {
+              position: relative;
+              display: inline-block;
+            }
 
-.of-line span{
-    width:75px;
-    height:2px;
-    border-radius:20px;
-    background:linear-gradient(
-        90deg,
-        transparent,
-        #0b6623,
-        transparent
-    );
-}     footer {
-          background: var(--green);
-          color: var(--white);
-          text-align: center;
-          padding: 16px;
-          margin-top: 40px;
-          font-size: 14px;
-        }
+            .dropdown > a::after {
+              content: "▾";
+              font-size: 12px;
+              margin-left: 6px;
+              position: relative;
+              top: 1px;
+            }
 
-        @keyframes fadeUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
+            .dropdown-content {
+              position: absolute;
+              top: 100%;
+              left: 0;
+              background: var(--white);
+              min-width: 210px;
+              border-radius: 10px;
+              box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+              opacity: 0;
+              visibility: hidden;
+              transform: translateY(10px);
+              transition: all 0.25s ease;
+              z-index: 9999;
+              pointer-events: none;
+            }
 
-        @keyframes fadeDown { from { opacity: 0; transform: translateY(-25px); } to { opacity: 1; transform: translateY(0); } }
+            .dropdown-content a {
+              color: var(--text);
+              text-decoration: none;
+              padding: 12px 16px;
+              display: block;
+              font-size: 14px;
+              transition: all 0.3s ease;
+            }
 
-        @media (max-width: 900px) {
-          .hero {
-          margin: 25px; padding: 28px; }
-          .agency { font-size: 16px; }
-        }
-        .leaders-section{
-    max-width:1200px;
-    margin:20px auto;
-    display:flex;
-    justify-content:space-between;
-    gap:15px;
-    padding:0 20px;
-    flex-wrap:wrap;
-}
+            .dropdown-content a:hover {
+              background: linear-gradient(90deg, var(--green), var(--blue));
+              color: var(--white);
+              transform: scale(1.02);
+            }
 
-.leader-card{
-    width:100%;
-    min-height:540px;
+            .dropdown:hover .dropdown-content {
+              opacity: 1;
+              visibility: visible;
+              transform: translateY(0);
+              pointer-events: auto;
+            }
+    .login-icon{
 
-    background:#fff;
-    border-radius:18px;
-    padding:20px;
-    text-align:center;
+        position:absolute;
 
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
-}
+        right:18px;
 
-.leader-card img{
-    width:100%;
-    max-width:270px;
-    aspect-ratio:4/5;
+        top:50%;
 
-    object-fit:cover;
-    object-position:top;
+        transform:translateY(-50%);
 
-    display:block;
-    margin:auto;
+        width:42px;
+        height:42px;
 
-    border-radius:14px;
-}
-.leader-card h3{
-    margin-top:12px;
-    font-size:18px;
-    color:#0b6623;
-    font-weight:600;
-}
+        display:flex;
+        align-items:center;
+        justify-content:center;
 
-.leader-card p{
-    font-size:14px;
-    color:#555;
-}
-.home-layout{
-    max-width:1700px;
-    width:100%;
-    margin:25px auto;
-    padding:0 20px;
+        color:#fff;
+        text-decoration:none;
 
-    display:grid;
-    grid-template-columns:300px minmax(0,1fr) 300px;
-    gap:20px;
-    align-items:start;
-}
-.side-leaders{
-    width:100%;
-}
-.leader-card{
-    width:100%;
-    height:520px;
-}
+        border-radius:50%;
 
-.leader-card img{
-    width:280px;
-    height:320px;
-    object-fit:cover;
-    object-position:top center;
-    border-radius:12px;
-    border:none;
-    display:block;
-}
+        transition:.3s;
+    }
 
-.leader-card h3{
-    margin-top:15px;
-    font-size:22px;
-    color:#0b6623;
-    font-weight:700;
-    min-height:55px;
-}
+    .login-icon i{
+        font-size:20px;
+    }
 
-.leader-card p{
-    font-size:15px;
-    color:#555;
-    line-height:1.5;
-}
+    .login-icon:hover{
 
-/* ACTIVITIES TITLE */
-.activity-title{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+        background:rgba(255,255,255,.18);
 
-    gap:2px;
+        color:#ffd54f;
 
-    margin-top:-50px;
-    margin-bottom:35px;
+        transform:translateY(-50%) scale(1.12);
+    }
 
-    line-height:1;
 
-    position:relative;
-    z-index:2;
-}
-
-.activity-title span:nth-child(1){
-    font-size:48px;
-    font-weight:900;
-}
-
-.activity-title span:nth-child(2){
-    font-size:28px;
-    font-weight:800;
-}
-
-.activity-title span:nth-child(3){
-    font-size:48px;
-    font-weight:900;
-}
-
-.activity-title span{
-    background:linear-gradient(90deg,#0b6623,#1a73e8);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}.footer-links{
-    max-width:1400px;
-    margin:40px auto;
-    padding:0 20px;
-    text-align:center;
-}
-
-.footer-links-row{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:10px;
-    flex-wrap:nowrap;
-    margin-top:20px;
-}
-
-.footer-links a{
-    text-decoration:none;
-    color:#0b6623;
-    font-weight:600;
-    font-size:14px;
-    padding:10px 16px;
-    background:rgba(255,255,255,0.90);
-    border:1px solid rgba(11,102,35,0.20);
-    border-radius:30px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.08);
-    transition:all .3s ease;
-    white-space:nowrap;
-}
-
-.footer-links a:hover{
-    background:linear-gradient(135deg,#0b6623,#1a73e8);
-    color:#fff;
-    transform:translateY(-3px);
-}
-
-.footer-btn{
-    background:linear-gradient(135deg,#0b6623,#1a73e8);
-    color:#fff;
-    border:none;
-    padding:10px 16px;
-    border-radius:30px;
-    font-size:14px;
-    font-weight:600;
-    cursor:pointer;
-    white-space:nowrap;
-}
-
-.site-footer{
-    background:#0b6623;
-    color:#fff;
-    padding:15px 30px;
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    align-items:center;
-    border-top:3px solid #ffffff20;
-}
-
-.footer-left{
-    justify-self:start;
-}
-
-.footer-center{
-    justify-self:center;
-    text-align:center;
-}
-
-.footer-right{
-    justify-self:end;
-    text-align:right;
-}
-.social-icons{
-    display:flex;
-    justify-content:center;
-    gap:14px;
-}
-
-.social-icons a{
-    width:42px;
-    height:42px;
-    border-radius:50%;
-    background:#ffffff20;
-    color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-decoration:none;
-    font-size:18px;
-    transition:.3s;
-}
-
-.social-icons a:hover{
-    background:#fff;
-    color:#0b6623;
-}
-.footer-right{
-    text-align:right;
-    font-size:13px;
-    line-height:1.4;
-    opacity:.95;
-}
-
-.footer-right strong{
-    color:#ffd54f;
-    display:block;
-    margin-top:8px;
-    margin-bottom:2px;
-}
-
-.footer-right a{
-    color:#ffffff;
-    text-decoration:none;
-    font-weight:500;
-}
-
-.footer-right a:hover{
-    color:#ffd54f;
-}
-@media(max-width:768px){
-    .site-footer{
-        flex-direction:column;
+    .hero{
+        width:100%;
+        background:#fff;
+        border-radius:18px;
+        box-shadow:0 10px 35px rgba(0,0,0,.08);
+        padding:20px;
         text-align:center;
+        overflow:hidden;
+    }.hero-image{
+        position:relative;
+        width:100%;
+        margin-top:18px;
+    }
+    .hero-banner{
+        width:100%;
+        display:block;
+        aspect-ratio:16/9;
+        object-fit:cover;
+        object-position:center;
+        border-radius:16px;
+    }
+
+    .hero h1{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 26px;
+        color: var(--green);
+        margin-bottom: 10px;
+    }
+
+    .hero p{
+        font-size: 15px;
+        color: #333;
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
+
+    /* TEXT */
+
+    .hero-text{
+        position:absolute;
+        inset:0;
+
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+
+        transform:translateY(-100px);   /* adjust this value */
+        pointer-events:none;
+    }
+
+    .hero-text h2{
+        margin:0;
+        font-size:clamp(40px,4vw,72px);
+        font-weight:900;
+        line-height:1;
+        color:#0b6623;
+        text-shadow:0 2px 8px rgba(255,255,255,.95);
+    }
+
+    .of-line{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:16px;
+        margin:6px 0;
+    }
+
+    .of-line h3{
+        margin:0;
+        font-size:clamp(22px,2vw,34px);
+        font-weight:700;
+        color:#0b6623;
+    }
+
+    .of-line span{
+        width:75px;
+        height:2px;
+        border-radius:20px;
+        background:linear-gradient(
+            90deg,
+            transparent,
+            #0b6623,
+            transparent
+        );
+    }     footer {
+              background: var(--green);
+              color: var(--white);
+              text-align: center;
+              padding: 16px;
+              margin-top: 40px;
+              font-size: 14px;
+            }
+
+            @keyframes fadeUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
+
+            @keyframes fadeDown { from { opacity: 0; transform: translateY(-25px); } to { opacity: 1; transform: translateY(0); } }
+
+            @media (max-width: 900px) {
+              .hero {
+              margin: 25px; padding: 28px; }
+              .agency { font-size: 16px; }
+            }
+            .leaders-section{
+        max-width:1200px;
+        margin:20px auto;
+        display:flex;
+        justify-content:space-between;
+        gap:15px;
+        padding:0 20px;
+        flex-wrap:wrap;
+    }
+
+    .leader-card{
+        width:100%;
+        min-height:540px;
+
+        background:#fff;
+        border-radius:18px;
+        padding:20px;
+        text-align:center;
+
+        box-shadow:0 8px 25px rgba(0,0,0,.08);
+    }
+
+    .leader-card img{
+        width:100%;
+        max-width:270px;
+        aspect-ratio:4/5;
+
+        object-fit:cover;
+        object-position:top;
+
+        display:block;
+        margin:auto;
+
+        border-radius:14px;
+    }
+    .leader-card h3{
+        margin-top:12px;
+        font-size:18px;
+        color:#0b6623;
+        font-weight:600;
+    }
+
+    .leader-card p{
+        font-size:14px;
+        color:#555;
+    }
+    .home-layout{
+        max-width:1700px;
+        width:100%;
+        margin:25px auto;
+        padding:0 20px;
+
+        display:grid;
+        grid-template-columns:300px minmax(0,1fr) 300px;
+        gap:20px;
+        align-items:start;
+    }
+    .side-leaders{
+        width:100%;
+    }
+    .leader-card{
+        width:100%;
+        height:520px;
+    }
+
+    .leader-card img{
+        width:280px;
+        height:320px;
+        object-fit:cover;
+        object-position:top center;
+        border-radius:12px;
+        border:none;
+        display:block;
+    }
+
+    .leader-card h3{
+        margin-top:15px;
+        font-size:22px;
+        color:#0b6623;
+        font-weight:700;
+        min-height:55px;
+    }
+
+    .leader-card p{
+        font-size:15px;
+        color:#555;
+        line-height:1.5;
+    }
+.tglda-logo{
+    width:100px;
+    height:100px;
+    object-fit:contain;
+}
+    /* ACTIVITIES TITLE */
+    .activity-title{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+
+        gap:2px;
+
+        margin-top:-50px;
+        margin-bottom:35px;
+
+        line-height:1;
+
+        position:relative;
+        z-index:2;
+    }
+
+    .activity-title span:nth-child(1){
+        font-size:48px;
+        font-weight:900;
+    }
+
+    .activity-title span:nth-child(2){
+        font-size:28px;
+        font-weight:800;
+    }
+
+    .activity-title span:nth-child(3){
+        font-size:48px;
+        font-weight:900;
+    }
+
+    .activity-title span{
+        background:linear-gradient(90deg,#0b6623,#1a73e8);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+    }.footer-links{
+        max-width:1400px;
+        margin:40px auto;
+        padding:0 20px;
+        text-align:center;
+    }
+
+    .footer-links-row{
+        display:flex;
+        justify-content:center;
+        align-items:center;
         gap:10px;
+        flex-wrap:nowrap;
+        margin-top:20px;
+    }
+
+    .footer-links a{
+        text-decoration:none;
+        color:#0b6623;
+        font-weight:600;
+        font-size:14px;
+        padding:10px 16px;
+        background:rgba(255,255,255,0.90);
+        border:1px solid rgba(11,102,35,0.20);
+        border-radius:30px;
+        box-shadow:0 4px 12px rgba(0,0,0,0.08);
+        transition:all .3s ease;
+        white-space:nowrap;
+    }
+
+    .footer-links a:hover{
+        background:linear-gradient(135deg,#0b6623,#1a73e8);
+        color:#fff;
+        transform:translateY(-3px);
+    }
+
+    .footer-btn{
+        background:linear-gradient(135deg,#0b6623,#1a73e8);
+        color:#fff;
+        border:none;
+        padding:10px 16px;
+        border-radius:30px;
+        font-size:14px;
+        font-weight:600;
+        cursor:pointer;
+        white-space:nowrap;
+    }
+
+    .site-footer{
+        background:#0b6623;
+        color:#fff;
+        padding:15px 30px;
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr;
+        align-items:center;
+        border-top:3px solid #ffffff20;
+    }
+
+    .footer-left{
+        justify-self:start;
+    }
+
+    .footer-center{
+        justify-self:center;
+        text-align:center;
     }
 
     .footer-right{
+        justify-self:end;
+        text-align:right;
+    }
+    .social-icons{
+        display:flex;
+        justify-content:center;
+        gap:14px;
+    }
+
+    .social-icons a{
+        width:42px;
+        height:42px;
+        border-radius:50%;
+        background:#ffffff20;
+        color:#fff;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        text-decoration:none;
+        font-size:18px;
+        transition:.3s;
+    }
+
+    .social-icons a:hover{
+        background:#fff;
+        color:#0b6623;
+    }
+    .footer-right{
+        text-align:right;
+        font-size:13px;
+        line-height:1.4;
+        opacity:.95;
+    }
+
+    .footer-right strong{
+        color:#ffd54f;
+        display:block;
+        margin-top:8px;
+        margin-bottom:2px;
+    }
+
+    .footer-right a{
+        color:#ffffff;
+        text-decoration:none;
+        font-weight:500;
+    }
+
+    .footer-right a:hover{
+        color:#ffd54f;
+    }
+    @media(max-width:768px){
+        .site-footer{
+            flex-direction:column;
+            text-align:center;
+            gap:10px;
+        }
+
+        .footer-right{
+            text-align:center;
+        }
+    }.activity-title{
         text-align:center;
+        font-size:42px;
+        font-weight:900;
+        text-transform:uppercase;
+        letter-spacing:4px;
+
+        background:linear-gradient(
+            90deg,
+            #0b6623,
+            #1a73e8,
+            #0b6623
+        );
+
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+
+        position:relative;
+        margin-bottom:50px;
+
+        text-shadow:
+            0 0 20px rgba(26,115,232,.25);
+
+        animation:shine 5s linear infinite;
     }
-}.activity-title{
-    text-align:center;
-    font-size:42px;
-    font-weight:900;
-    text-transform:uppercase;
-    letter-spacing:4px;
 
-    background:linear-gradient(
-        90deg,
-        #0b6623,
-        #1a73e8,
-        #0b6623
-    );
+    .activity-title::after{
+        content:'';
+        position:absolute;
+        left:50%;
+        bottom:-15px;
+        transform:translateX(-50%);
 
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+        width:220px;
+        height:5px;
 
-    position:relative;
-    margin-bottom:50px;
+        border-radius:50px;
 
-    text-shadow:
-        0 0 20px rgba(26,115,232,.25);
+        background:linear-gradient(
+            90deg,
+            transparent,
+            #0b6623,
+            #1a73e8,
+            #0b6623,
+            transparent
+        );
 
-    animation:shine 5s linear infinite;
-}
-
-.activity-title::after{
-    content:'';
-    position:absolute;
-    left:50%;
-    bottom:-15px;
-    transform:translateX(-50%);
-
-    width:220px;
-    height:5px;
-
-    border-radius:50px;
-
-    background:linear-gradient(
-        90deg,
-        transparent,
-        #0b6623,
-        #1a73e8,
-        #0b6623,
-        transparent
-    );
-
-    box-shadow:
-        0 0 15px rgba(26,115,232,.5),
-        0 0 25px rgba(11,102,35,.4);
-}
-
-@keyframes shine{
-    0%{
-        filter:hue-rotate(0deg);
+        box-shadow:
+            0 0 15px rgba(26,115,232,.5),
+            0 0 25px rgba(11,102,35,.4);
     }
-    100%{
-        filter:hue-rotate(360deg);
+
+    @keyframes shine{
+        0%{
+            filter:hue-rotate(0deg);
+        }
+        100%{
+            filter:hue-rotate(360deg);
+        }
     }
-}
 
-/*==========================================
-            ACTIVITIES
-==========================================*/
+    /*==========================================
+                ACTIVITIES
+    ==========================================*/
 
-.activities-grid{
-    display:grid;
-    grid-template-columns:repeat(2,minmax(250px,1fr));
-    gap:15px;
-    margin-top:25px;
-}
-/* CARD */
+    .activities-grid{
+        display:grid;
+        grid-template-columns:repeat(2,minmax(250px,1fr));
+        gap:15px;
+        margin-top:25px;
+    }
+    /* CARD */
 
-.activity-card{
-    display:flex;
-    align-items:center;
-    gap:15px;
+    .activity-card{
+        display:flex;
+        align-items:center;
+        gap:15px;
 
-    min-height:78px;
+        min-height:78px;
 
-    padding:14px 18px;
+        padding:14px 18px;
 
-    background:#fff;
-    border:1px solid #e7e7e7;
-    border-radius:14px;
+        background:#fff;
+        border:1px solid #e7e7e7;
+        border-radius:14px;
 
-    box-shadow:0 3px 10px rgba(0,0,0,.05);
+        box-shadow:0 3px 10px rgba(0,0,0,.05);
 
-    transition:.3s;
-}
+        transition:.3s;
+    }
 
-/* ICON */
+    /* ICON */
 
-.activity-card span{
+    .activity-card span{
 
-    width:40px;
+        width:40px;
 
-    height:40px;
+        height:40px;
 
-    min-width:40px;
+        min-width:40px;
 
-    display:flex;
+        display:flex;
 
-    align-items:center;
+        align-items:center;
 
-    justify-content:center;
+        justify-content:center;
 
-    font-size:20px;
+        font-size:20px;
 
-    border-radius:10px;
+        border-radius:10px;
 
-    background:linear-gradient(135deg,#0b6623,#1a73e8);
+        background:linear-gradient(135deg,#0b6623,#1a73e8);
 
-    color:#ffffff;
+        color:#ffffff;
 
-    transition:all .25s ease;
+        transition:all .25s ease;
 
-}
+    }
 
-/* TITLE */
-.activity-card h3{
-    flex:1;
-    margin:0;
-    text-align:center;
-    font-size:clamp(15px,1.1vw,19px);
-    line-height:1.3;
-    color:#14532d;
-}
+    /* TITLE */
+    .activity-card h3{
+        flex:1;
+        margin:0;
+        text-align:center;
+        font-size:clamp(15px,1.1vw,19px);
+        line-height:1.3;
+        color:#14532d;
+    }
 
-/* HOVER */
+    /* HOVER */
 
-.activity-card:hover{
+    .activity-card:hover{
 
-    background:#f7fbff;
+        background:#f7fbff;
 
-    border-color:#1a73e8;
+        border-color:#1a73e8;
 
-    box-shadow:0 8px 18px rgba(0,0,0,.08);
+        box-shadow:0 8px 18px rgba(0,0,0,.08);
 
-    transform:translateY(-2px);
+        transform:translateY(-2px);
 
-}
+    }
 
-/* KEEP ICON SAME */
+    /* KEEP ICON SAME */
 
-.activity-card:hover span{
+    .activity-card:hover span{
 
-    background:linear-gradient(135deg,#0b6623,#1a73e8);
+        background:linear-gradient(135deg,#0b6623,#1a73e8);
 
-    color:#ffffff;
+        color:#ffffff;
 
-    transform:scale(1.05);
+        transform:scale(1.05);
 
-}
+    }
 
-/* KEEP TEXT VISIBLE */
+    /* KEEP TEXT VISIBLE */
 
-.activity-card:hover h3{
+    .activity-card:hover h3{
 
-    color:#14532d;
+        color:#14532d;
 
-}
+    }
 
-/* CLICK */
+    /* CLICK */
 
-.activity-card:active{
+    .activity-card:active{
 
-    transform:scale(.98);
+        transform:scale(.98);
 
-}
+    }
 
-/* MOBILE */
+    /* MOBILE */
 
-@media(max-width:768px){
+    @media(max-width:768px){
 
-.activities-grid{
+    .activities-grid{
 
-    grid-template-columns:1fr;
+        grid-template-columns:1fr;
 
-}
+    }
 
-.activity-card{
+    .activity-card{
 
-    height:68px;
+        height:68px;
 
-}
+    }
 
-.activity-card h3{
+    .activity-card h3{
 
-    font-size:14px;
+        font-size:14px;
 
-}
+    }
 
-.activity-card span{
+    .activity-card span{
 
-    width:36px;
-    height:36px;
-    font-size:18px;
+        width:36px;
+        height:36px;
+        font-size:18px;
 
-}
+    }
 
-}
+    }
 
-/* ==========================
-   IMPORTANT LINKS DROPDOWN
-========================== */
+    /* ==========================
+       IMPORTANT LINKS DROPDOWN
+    ========================== */
 
-.footer-dropdown{
-    position:relative;
-    display:inline-block;
-}
+    .footer-dropdown{
+        position:relative;
+        display:inline-block;
+    }
 
-.footer-dropdown-content{
-    position:absolute;
-    top:100%;              /* BELOW Important Links */
-    left:50%;
-    transform:translateX(-50%);
-    margin-top:6px;        /* Small gap below button */
+    .footer-dropdown-content{
+        position:absolute;
+        top:100%;              /* BELOW Important Links */
+        left:50%;
+        transform:translateX(-50%);
+        margin-top:6px;        /* Small gap below button */
 
-    width:220px;
+        width:220px;
 
-    background:#fff;
-    border:1px solid #d9d9d9;
-    border-radius:4px;
-    box-shadow:0 6px 15px rgba(0,0,0,.12);
+        background:#fff;
+        border:1px solid #d9d9d9;
+        border-radius:4px;
+        box-shadow:0 6px 15px rgba(0,0,0,.12);
 
-    overflow:hidden;
-    opacity:0;
-    visibility:hidden;
-    transition:.2s ease;
-    z-index:99999;
-}
-.footer-dropdown:hover .footer-dropdown-content{
-    opacity:1;
-    visibility:visible;
-}
+        overflow:hidden;
+        opacity:0;
+        visibility:hidden;
+        transition:.2s ease;
+        z-index:99999;
+    }
+    .footer-dropdown:hover .footer-dropdown-content{
+        opacity:1;
+        visibility:visible;
+    }
 
-.footer-dropdown-content a{
-    display:block;
-    padding:7px 12px;
-    text-decoration:none;
-    color:#333;
-    font-size:13px;
-    font-weight:500;
-    background:transparent;
-    border:none;
-    border-radius:0;
-    box-shadow:none;
-    line-height:1.4;
-}
+    .footer-dropdown-content a{
+        display:block;
+        padding:7px 12px;
+        text-decoration:none;
+        color:#333;
+        font-size:13px;
+        font-weight:500;
+        background:transparent;
+        border:none;
+        border-radius:0;
+        box-shadow:none;
+        line-height:1.4;
+    }
 
-.footer-dropdown-content a:last-child{
-    border-bottom:none;
-}
+    .footer-dropdown-content a:last-child{
+        border-bottom:none;
+    }
 
-.footer-dropdown-content a:hover{
-    background:#f5f5f5;
-    color:#0b6623;
-}
+    .footer-dropdown-content a:hover{
+        background:#f5f5f5;
+        color:#0b6623;
+    }
 
-.footer-dropdown-content::after{
-    content:"";
-    position:absolute;
-    left:50%;
-    bottom:-6px;
-    transform:translateX(-50%) rotate(45deg);
-    width:10px;
-    height:10px;
-    background:#fff;
-    border-right:1px solid #d9d9d9;
-    border-bottom:1px solid #d9d9d9;
-}
- @media (max-width:1400px){
+    .footer-dropdown-content::after{
+        content:"";
+        position:absolute;
+        left:50%;
+        bottom:-6px;
+        transform:translateX(-50%) rotate(45deg);
+        width:10px;
+        height:10px;
+        background:#fff;
+        border-right:1px solid #d9d9d9;
+        border-bottom:1px solid #d9d9d9;
+    }
+     @media (max-width:1400px){
 
-.home-layout{
-    grid-template-columns:260px minmax(0,1fr) 260px;
-}
+    .home-layout{
+        grid-template-columns:260px minmax(0,1fr) 260px;
+    }
 
-}
+    }
 
-@media (max-width:1200px){
+    @media (max-width:1200px){
 
-.home-layout{
-    grid-template-columns:1fr;
-}
+    .home-layout{
+        grid-template-columns:1fr;
+    }
 
-.side-leaders{
-    max-width:350px;
-    margin:auto;
-}
+    .side-leaders{
+        max-width:350px;
+        margin:auto;
+    }
 
-.activities-grid{
-    grid-template-columns:repeat(2,1fr);
-}
+    .activities-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-}
+    }
 
-@media (max-width:768px){
+    @media (max-width:768px){
 
-.activities-grid{
-    grid-template-columns:1fr;
-}
+    .activities-grid{
+        grid-template-columns:1fr;
+    }
 
-.hero-text h2{
-    font-size:34px;
-}
+    .hero-text h2{
+        font-size:34px;
+    }
 
-.of-line h3{
-    font-size:20px;
-}
+    .of-line h3{
+        font-size:20px;
+    }
 
-}</style>
-</head>
+    }
+        </style>
+    </head>
 
-<body>
+    <body>
 
-<div class="top-bar"></div>
+    <div class="top-bar"></div>
 
-<header class="site-header">
+    <header class="site-header">
 
-    <div class="header-left">
-        <img src="/Govt.jpg.png" class="corner-logo">
+        <div class="header-left">
 
+            <img src="/Govt.jpg.png" class="corner-logo">
 
-        <div class="top-person">
-            <img src="/cm.jpg.png" class="cm-image">
-            <span>Sri Hon'ble Chief Minister</span>
-        </div>
-    </div>
-
-    <div class="header-center-row">
-
-        <img src="/Tglda.jpg.png" class="center-logo">
-
-        <div class="brand">
-            <div class="gov">
-                TELANGANA LIVESTOCK DEVELOPMENT AGENCY
-                <span class="agency">- (TGLDA)</span>
+            <div class="top-person">
+                <img src="/cm.jpg.png" class="cm-image">
+                <span>Sri Hon'ble Chief Minister</span>
             </div>
 
-            <strong>
-                Department of Animal Husbandry, Government of Telangana
-            </strong>
-        </div>
-
-    </div>
-
-    <div class="header-right">
-
-        <div class="top-person">
-            <img src="/dep.jpg.png">
-            <span>Sri Hon'ble Deputy Chief Minister</span>
-        </div>
-
-        <img src="/Goi.jpg" class="corner-logo">
-
-    </div>
-    </div>
-</header>
-<nav>
-
-    <div class="nav-inner nav-links">
-
-        <a href="/">HOME</a>
-
-        <a href="/animalBreeding">ANIMAL BREEDING</a>
-
-        <div class="dropdown">
-            <a href="#">FSBS</a>
-            <div class="dropdown-content">
-                <a href="/login">FSBS – Karimnagar</a>
-                <a href="/login">FSBS – Kamsanpalle</a>
+            <div class="top-person">
+                <img src="/dep.jpg.png" class="dep-image">
+                <span>Sri Hon'ble Deputy Chief Minister</span>
             </div>
+
         </div>
 
-        <div class="dropdown">
-            <a href="#">MEDIA</a>
-            <div class="dropdown-content">
-                <a href="/photo-gallery">Photo Gallery</a>
-                <a href="/video-gallery">Video Gallery</a>
+        <div class="header-center-row">
+
+            <div class="center-goi">
+                <img src="/Goi.jpg" alt="Government of India">
             </div>
-        </div>
 
-        <a href="#">CIRCULARS & GO's</a>
-        <a href="saveGomatha">SAVE GO MATHA</a>
-        <a href="contact">CONTACT</a>
-
-
-    </div>
-
-    <a href="/login" class="login-icon" title="CEO Login">
-        <i class="fas fa-user-lock"></i>
-    </a>
-
-</nav>
-<div class="home-layout">
-
-    <div class="side-leaders">
-
-        <div class="leader-card">
-            <img src="/min.jpg.png">
-            <h3>Sri Vakiti Srihari</h3>
-            <p>Hon'ble Minister for Animal Husbandry, Dairy Development and Fisheries, Sports and Youth Services</p>
-               </p>
-        </div>
-
-
-    </div>
-
-    <section class="hero">
-
-        <h1>Welcome to the Telangana Livestock Development Agency (TGLDA)</h1>
-
-        <p>
-            The Telangana Livestock Development Agency (TGLDA) serves as a centralized platform for
-            the Animal Breeding & Veterinary Department.
-        </p>
-
-        <div class="hero-image">
-            <img src="/Animal.jpg.png" class="hero-banner">
-
-            <div class="hero-text">
-                <h2>ACTIVITIES</h2>
-
-                <div class="of-line">
-                    <span></span>
-                    <h3>OF</h3>
-                    <span></span>
+            <div class="brand">
+                <div class="gov">
+                    TELANGANA LIVESTOCK DEVELOPMENT AGENCY
+                    <span class="agency">- (TGLDA)</span>
                 </div>
 
-                <h2>TGLDA</h2>
+                <strong>
+                    Department of Animal Husbandry, Government of Telangana
+                </strong>
             </div>
+
         </div>
-        <div class="activities-grid">
 
-            <div class="activity-card">
-                <span>🧑‍⚕️</span>
-                <h3>Veterinarian</h3>
+        <div class="header-right">
+
+            <div class="top-person">
+                <img src="/min.jpg.png" class="cm-image">
+                <span>Sri Hon'ble Minister</span>
             </div>
 
-            <a href="https://play.google.com/store/apps/details?id=com.farmerpashudhan.production&hl=en_IN"
-               target="_blank"
-               style="text-decoration:none; color:inherit;">
+            <img src="/Tglda.jpg.png" class="tglda-logo">
+
+        </div>
+
+
+
+        </div>
+
+    </header>
+    <nav>
+
+        <div class="nav-inner nav-links">
+
+            <a href="/">HOME</a>
+
+            <a href="/animalBreeding">ANIMAL BREEDING</a>
+
+            <div class="dropdown">
+                <a href="#">FSBS</a>
+                <div class="dropdown-content">
+                    <a href="/login">FSBS – Karimnagar</a>
+                    <a href="/login">FSBS – Kamsanpalle</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#">MEDIA</a>
+                <div class="dropdown-content">
+                    <a href="/photo-gallery">Photo Gallery</a>
+                    <a href="/video-gallery">Video Gallery</a>
+                </div>
+            </div>
+
+            <a href="#">CIRCULARS & GO's</a>
+            <a href="saveGomatha">SAVE GO MATHA</a>
+            <a href="contact">CONTACT</a>
+
+
+        </div>
+
+        <a href="/login" class="login-icon" title="CEO Login">
+            <i class="fas fa-user-lock"></i>
+        </a>
+
+    </nav>
+    <div class="home-layout">
+
+        <div class="side-leaders">
+
+            <div class="leader-card">
+                <img src="/Chair.jpg" alt="Chairman">
+                <h3>Dr.Singam Charan Koushik</h3>
+                <p>TGLDA Chairman</p>
+            </div>
+
+
+        </div>
+
+        <section class="hero">
+
+            <h1>Welcome to the Telangana Livestock Development Agency (TGLDA)</h1>
+
+            <p>
+                The Telangana Livestock Development Agency (TGLDA) serves as a centralized platform for
+                the Animal Breeding & Veterinary Department.
+            </p>
+
+            <div class="hero-image">
+                <img src="/Animal.jpg.png" class="hero-banner">
+
+                <div class="hero-text">
+                    <h2>ACTIVITIES</h2>
+
+                    <div class="of-line">
+                        <span></span>
+                        <h3>OF</h3>
+                        <span></span>
+                    </div>
+
+                    <h2>TGLDA</h2>
+                </div>
+            </div>
+            <div class="activities-grid">
 
                 <div class="activity-card">
-                    <span>📱</span>
-                    <h3>Doorstep AI</h3>
+                    <span>🧑‍⚕️</span>
+                    <h3>Veterinarian</h3>
                 </div>
 
-            </a>
-            <a href="https://bharatpashudhan.ndlm.co.in/keyStatistics?key=3&pageLabel=Breeding"
-               target="_blank"
-               style="text-decoration: none; color: inherit;">
+                <a href="https://play.google.com/store/apps/details?id=com.farmerpashudhan.production&hl=en_IN"
+                   target="_blank"
+                   style="text-decoration:none; color:inherit;">
+
+                    <div class="activity-card">
+                        <span>📱</span>
+                        <h3>Doorstep AI</h3>
+                    </div>
+
+                </a>
+                <a href="https://bharatpashudhan.ndlm.co.in/keyStatistics?key=3&pageLabel=Breeding"
+                   target="_blank"
+                   style="text-decoration: none; color: inherit;">
+
+                    <div class="activity-card">
+                        <span>💉</span>
+                        <h3>NAIP Programme</h3>
+                    </div>
+
+                </a>
+
+                <a href="https://bharatpashudhan.ndlm.co.in/keyStatistics?key=3&pageLabel=Breeding"
+                   target="_blank"
+                   style="text-decoration: none; color: inherit;">
+
+                    <div class="activity-card">
+                        <span>💉</span>
+                        <h3>Sexed Semen Programme</h3>
+                    </div>
+
+                </a>
+
+
+
+                <a href="/gopalmithra" style="text-decoration:none; color:inherit;">
+                    <div class="activity-card">
+                        <span>🧑‍🌾</span>
+                        <h3>Gopal Mithras/Pashu Mithras/MAITRIs</h3>
+                    </div>
+                </a>
+                <div class="activity-card">
+                    <span>📢</span>
+                    <h3>Awareness Camps</h3>
+                </div>
 
                 <div class="activity-card">
-                    <span>💉</span>
-                    <h3>NAIP Programme</h3>
+                    <span>🛡️</span>
+                    <h3>Insurance</h3>
                 </div>
-
-            </a>
-
-            <a href="https://bharatpashudhan.ndlm.co.in/keyStatistics?key=3&pageLabel=Breeding"
-               target="_blank"
-               style="text-decoration: none; color: inherit;">
 
                 <div class="activity-card">
-                    <span>💉</span>
-                    <h3>Sexed Semen Programme</h3>
+                    <span>❄️</span>
+                    <h3>Frozen Semen</h3>
                 </div>
 
-            </a>
-
-
-
-            <a href="/gopalmithra" style="text-decoration:none; color:inherit;">
-                <div class="activity-card">
-                    <span>🧑‍🌾</span>
-                    <h3>Gopal Mithras/Pashu Mithras/MAITRIs</h3>
-                </div>
-            </a>
-            <div class="activity-card">
-                <span>📢</span>
-                <h3>Awareness Camps</h3>
             </div>
+        </section>
 
-            <div class="activity-card">
-                <span>🛡️</span>
-                <h3>Insurance</h3>
-            </div>
+        <div class="side-leaders">
 
-            <div class="activity-card">
-                <span>❄️</span>
-                <h3>Frozen Semen</h3>
+            <div class="leader-card">
+            <img src="/Chair.jpg" alt="Chairman">
+            <h3>Dr.Singam Charan Koushik</h3>
+            <p>TGLDA Chairman</p>
+        </div>
+
+        </div>
+
+    </div>
+
+    <section class="footer-links">
+
+        <h3 style="text-align:center;color:#0b6623;font-size:32px;font-weight:700;">
+            Quick Links
+        </h3>
+
+        <div class="footer-links-row">
+
+            <a href="/about">About TGLDA</a>
+            <a href="#">Our Services</a>
+            <a href="#">Our Projects</a>
+            <a href="#">TGLDA Schemes</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="https://www.google.com/maps/place/A+P+Live+Stock+Development+Agency/@17.3998277,78.4542467,21z/data=!4m6!3m5!1s0x3bcb91b971555555:0x380c03ce7277efb!8m2!3d17.399837!4d78.454363!16s%2Fg%2F1v1tljwg?entry=ttu" target="_blank">
+                Find Us On Map
+            </a>
+
+        <div class="footer-dropdown">
+            <button class="footer-btn">
+                Important Links ▾
+            </button>
+
+            <div class="footer-dropdown-content">
+                <a href="https://www.telangana.gov.in/" target="_blank">
+                    Telangana Official Website
+                </a>
+                <a href="https://vahd.telangana.gov.in/" target="_blank">
+                    VAHD
+                </a>
+
+                <a href="https://bharatpashudhan.ndlm.co.in/" target="_blank">
+                    Bharat Pashudhan
+                </a>
+                <a href="https://sheepfed.telangana.gov.in/" target="_blank">
+                    Sheep & Goat
+                </a>
+                <a href="https://elaabh.telangana.gov.in/" target="_blank">
+                    E-LAABH
+                </a>
             </div>
 
         </div>
+        </div>
+
     </section>
 
-    <div class="side-leaders">
+    <footer class="site-footer">
 
-        <div class="leader-card">
-        <img src="/Chair.jpg" alt="Chairman">
-        <h3>Dr.Singam Charan Koushik</h3>
-        <p>TGLDA Chairman</p>
-    </div>
+        <div class="footer-left">
+            © 2026 Telangana Livestock Development Agency (TGLDA)
+        </div>
 
-    </div>
+        <div class="footer-center">
+            <strong>Follow Us On</strong>
 
-</div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
 
-<section class="footer-links">
+        <div class="footer-right">
+            <strong>Office Address:</strong><br>
+            TGLDA, Road No. 4,<br>
+            Shanti Nagar, Masab Tank,<br>
+            Hyderabad - 500028<br><br>
 
-    <h3 style="text-align:center;color:#0b6623;font-size:32px;font-weight:700;">
-        Quick Links
-    </h3>
-
-    <div class="footer-links-row">
-
-        <a href="/about">About TGLDA</a>
-        <a href="#">Our Services</a>
-        <a href="#">Our Projects</a>
-        <a href="#">TGLDA Schemes</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms & Conditions</a>
-        <a href="https://www.google.com/maps/place/A+P+Live+Stock+Development+Agency/@17.3998277,78.4542467,21z/data=!4m6!3m5!1s0x3bcb91b971555555:0x380c03ce7277efb!8m2!3d17.399837!4d78.454363!16s%2Fg%2F1v1tljwg?entry=ttu" target="_blank">
-            Find Us On Map
-        </a>
-
-    <div class="footer-dropdown">
-        <button class="footer-btn">
-            Important Links ▾
-        </button>
-
-        <div class="footer-dropdown-content">
-            <a href="https://www.telangana.gov.in/" target="_blank">
-                Telangana Official Website
-            </a>
-            <a href="https://vahd.telangana.gov.in/" target="_blank">
-                VAHD
-            </a>
-
-            <a href="https://bharatpashudhan.ndlm.co.in/" target="_blank">
-                Bharat Pashudhan
-            </a>
-            <a href="https://sheepfed.telangana.gov.in/" target="_blank">
-                Sheep & Goat
-            </a>
-            <a href="https://elaabh.telangana.gov.in/" target="_blank">
-                E-LAABH
+            <strong>Email:</strong><br>
+            <a href="mailto:tslda1382014@gmail.com">
+                tslda1382014@gmail.com
             </a>
         </div>
 
-    </div>
-    </div>
+    </footer>
 
-</section>
-
-<footer class="site-footer">
-
-    <div class="footer-left">
-        © 2026 Telangana Livestock Development Agency (TGLDA)
-    </div>
-
-    <div class="footer-center">
-        <strong>Follow Us On</strong>
-
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-x-twitter"></i></a>
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
-        </div>
-    </div>
-
-    <div class="footer-right">
-        <strong>Office Address:</strong><br>
-        TGLDA, Road No. 4,<br>
-        Shanti Nagar, Masab Tank,<br>
-        Hyderabad - 500028<br><br>
-
-        <strong>Email:</strong><br>
-        <a href="mailto:tslda1382014@gmail.com">
-            tslda1382014@gmail.com
-        </a>
-    </div>
-
-</footer>
-
-</body>
-</html>
+    </body>
+    </html>
