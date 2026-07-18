@@ -316,246 +316,79 @@ nav{
 
         pointer-events: auto;
     }
-        /*=========================================
-          SAVE GO MATHA BACKGROUND SECTION
-    =========================================*/
-
-    .savegomatha-hero{
-
-        position:relative;
-
-        min-height:calc(100vh - 165px);
-
-        background:
-            linear-gradient(
-                rgba(255,255,255,.55),
-                rgba(255,255,255,.60)
-            ),
-            url("/SaveGomatha.jpg.png");
-
-        background-size:cover;
-
-        background-position:center 120px;
-
-        background-repeat:no-repeat;
-
-        background-attachment:fixed;
-
-        display:flex;
-
-        justify-content:center;
-
-        align-items:flex-start;
-
-        padding:70px 40px;
-
-    }
-
-    /* Content */
-
-    .savegomatha-content{
-
-        width:100%;
-        max-width:1050px;
-        text-align:center;
-        z-index:2;
-
-    }
-
-    /* Heading */
-
-    .savegomatha-content h1{
-
-        font-family:'Cinzel',serif;
-
-        font-size:54px;
-
-        font-weight:700;
-
-        color:#9b6900;
-
-        margin-bottom:28px;
-
-        text-shadow:
-            0 2px 10px rgba(255,255,255,.95),
-            0 1px 3px rgba(0,0,0,.18);
-
-    }
-    /* Paragraph */
-
-    .savegomatha-content p{
-
-        max-width:900px;
-        margin:auto;
-
-        font-size:20px;
-        line-height:1.9;
-
-        color:#2b2b2b;
-
-        background:rgba(255,255,255,.42);
-
-        backdrop-filter:blur(6px);
-
-        border-radius:18px;
-
-        padding:28px 34px;
-
-        box-shadow:0 8px 24px rgba(0,0,0,.08);
-
-    }.donate-btn{
-
-        display:inline-block;
-
-        margin-left:18px;
-
-        padding:10px 22px;
-
-        background:linear-gradient(135deg,#ff9800,#d97706);
-
-        color:#fff;
-
-        text-decoration:none;
-
-        font-size:18px;
-
-        font-weight:700;
-
-        border-radius:30px;
-
-        box-shadow:0 6px 15px rgba(0,0,0,.18);
-
-        transition:.3s ease;
-
-        vertical-align:middle;
-
-    }
-
-    .donate-btn:hover{
-
-        background:linear-gradient(135deg,#d97706,#b45309);
-
-        transform:translateY(-2px);
-
-        box-shadow:0 10px 20px rgba(0,0,0,.22);
-
-    }
-            body {
-                margin: 0;
-                padding: 20px;
-                background: #f3fff3;
-                font-family: 'Poppins', sans-serif;
-            }
-
-            /* Simple heading */
-            h1 {
-                text-align: center;
-                font-size: 22px;
-                color: #0b6623; /* green theme */
-                margin-bottom: 18px;
-                font-weight: 600;
-            }
-
-            /* Grid layout */
-            .gallery {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-                gap: 12px;
-            }
-
-            /* Image frame */
-            .photo-box {
-                background: #ffffff;
-                border: 1px solid rgba(0,0,0,0.15);
-                border-radius: 10px;
-                height: 130px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                overflow: hidden;
-                padding: 6px;
-                cursor: zoom-in;
-                transition: box-shadow 0.2s ease;
-            }
-
-            .photo-box:hover {
-                box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            }
-
-            .photo-box img {
-                max-width: 100%;
-                max-height: 100%;
-                object-fit: contain;
-                transition: transform 0.25s ease;
-            }
-
-            .photo-box:hover img {
-                transform: scale(1.18);
-            }
-
-.video-section{
-    padding:210px 40px 60px;
-    background:#f5fff5;
-}
-
-.video-header{
+.page-heading{
     text-align:center;
-    max-width:900px;
-    margin:0 auto 50px;
+    margin:60px auto 35px;
 }
 
-.video-header h1{
-    font-size:42px;
-    color:#0b6623;
+.page-heading h1{
+    font-family:'Montserrat',sans-serif;
+    font-size:30px;          /* Reduced size */
     font-weight:800;
-    margin-bottom:15px;
-}
-
-.video-header p{
-    font-size:18px;
-    color:#555;
-    line-height:1.8;
-}
-
-.video-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
-    gap:35px;
-}
-
-.video-card{
-    background:#fff;
-    border-radius:18px;
-    overflow:hidden;
-    border:2px solid #d9e8d9;
-    box-shadow:0 10px 28px rgba(0,0,0,.12);
-    transition:.35s;
-}
-
-.video-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 18px 45px rgba(0,0,0,.22);
-    border-color:#0b6623;
-}
-
-.video-card video{
-    width:100%;
-    aspect-ratio:16/9;
-    object-fit:cover;
-    display:block;
-}
-
-.video-title{
-    padding:18px;
-    text-align:center;
-    font-size:17px;
-    font-weight:700;
     color:#0b6623;
-    background:#fff;
+    letter-spacing:0.5px;
+    margin-bottom:8px;
+    text-transform:none;     /* Normal case */
+}
+.page-heading p{
+    font-family:'Poppins',sans-serif;
+    font-size:18px;
+    font-weight:500;
+    color:#4a4a4a;
+    letter-spacing:.4px;
+}.page-heading::after{
+    content:"";
+    display:block;
+    width:90px;          /* Underline length */
+    height:4px;          /* Thickness */
+    background:#0b6623;  /* Green color */
+    margin:15px auto 0;  /* Centered below subtitle */
+    border-radius:10px;
+}.hero-image{
+    max-width:1200px;
+    margin:40px auto 60px;
+    padding:18px;
+    background:rgba(255,255,255,0.75);
+    border:2px solid rgba(11,102,35,0.12);
+    border-radius:22px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+    position:relative;
+    overflow:hidden;
+}
+
+/* Top green-blue accent */
+.hero-image::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:6px;
+    background:linear-gradient(90deg,#0b6623,#1a73e8);
+}
+
+/* Soft background graphics */
+.hero-image::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at top left,
+        rgba(11,102,35,.08),transparent 45%),
+        radial-gradient(circle at bottom right,
+        rgba(26,115,232,.08),transparent 45%);
+    pointer-events:none;
+}
+
+.hero-image img{
+    width:100%;
+    display:block;
+    border-radius:16px;
+    border:1px solid rgba(11,102,35,.15);
 }
     </style>
 </head>
-
 <body>
 <div class="top-bar"></div>
 
@@ -608,6 +441,7 @@ nav{
 
         <a href="/animalBreeding">ANIMAL BREEDING</a>
 
+
         <div class="dropdown">
             <a href="#">FSBS</a>
             <div class="dropdown-content">
@@ -630,82 +464,14 @@ nav{
 
 
     </div>
+
 </nav>
-<section class="video-section">
-
-    <div class="video-header">
-        <h1>TGLDA Video Gallery</h1>
-        <p>
-            Explore videos showcasing TGLDA's livestock development programmes,
-            awareness campaigns, training sessions, field activities, achievements
-            and special events across Telangana.
-        </p>
-    </div>
-
-    <div class="video-grid">
-
-        <div class="video-card">
-            <video controls poster="/thumb1.jpg">
-                <source src="/video1.mp4" type="video/mp4">
-            </video>
-            <div class="video-title">Video 1</div>
-        </div>
-
-        <div class="video-card">
-            <video controls poster="/thumb2.jpg">
-                <source src="/video2.mp4" type="video/mp4">
-            </video>
-            <div class="video-title">Video 2</div>
-        </div>
-
-        <div class="video-card">
-            <video controls poster="/thumb3.jpg">
-                <source src="/video3.mp4" type="video/mp4">
-            </video>
-            <div class="video-title">Video 3</div>
-        </div>
-
-        <div class="video-card">
-            <video controls poster="/thumb4.jpg">
-                <source src="/video4.mp4" type="video/mp4">
-            </video>
-            <div class="video-title">Video 4</div>
-        </div>
-
-        <div class="video-card">
-            <video controls poster="/thumb5.jpg">
-                <source src="/video5.mp4" type="video/mp4">
-            </video>
-            <div class="video-title">Video 5</div>
-        </div>
-
-        <div class="video-card">
-            <video controls poster="/thumb6.jpg">
-                <source src="/video6.mp4" type="video/mp4">
-            </video>
-            <div class="video-title">Video 6</div>
-        </div>
-
-        <div class="video-card">
-            <video controls poster="/thumb7.jpg">
-                <source src="/video7.mp4" type="video/mp4">
-            </video>
-            <div class="video-title">Video 7</div>
-        </div>
-
-        <div class="video-card">
-            <video controls poster="/thumb8.jpg">
-                <source src="/video8.mp4" type="video/mp4">
-            </video>
-            <div class="video-title">Video 8</div>
-        </div>
-        <div class="video-card">
-            <video controls poster="/thumb8.jpg">
-                <source src="/video9.mp4" type="video/mp4">
-            </video>
-            <div class="video-title">Video 9</div>
-        </div>
-
-    </div>
-
+<section class="page-heading">
+    <h1>Animal Breeding in Telangana</h1>
+    <p>Detailed overview of breeding services</p>
 </section>
+<section class="hero-image">
+    <img src="/animalBreeding.jpg.png" alt="Animal Breeding">
+</section>
+</body>
+</html>

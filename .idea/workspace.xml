@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abb4efa3-397c-4b3b-bf9e-4638ee0feb05" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/animalBreeding.jpg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/animalBreeding.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/gopalmithra.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/gopalmithra.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/photo-gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/photo-gallery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/saveGomatha.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/saveGomatha.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/video-gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/video-gallery.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,33 +60,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Acer/IdeaProjects/Fsbstest/pom.xml",
-    "onboarding.tips.debug.path": "C:/Users/Acer/IdeaProjects/Fsbstest/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Acer/IdeaProjects/Fsbstest/pom.xml&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Acer/IdeaProjects/Fsbstest/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Acer\IdeaProjects\Fsbstest\src\main\resources\static" />
       <recent name="C:\Users\Acer\IdeaProjects\Fsbstest\frontend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Acer\IdeaProjects\Fsbstest\src\main\resources\static" />
       <recent name="C:\Users\Acer\IdeaProjects\Fsbstest\src\main\resources\static\manuals" />
       <recent name="C:\Users\Acer\IdeaProjects\Fsbstest\src\main\resources\static\downloads" />
-      <recent name="C:\Users\Acer\IdeaProjects\Fsbstest\src\main\resources\static" />
       <recent name="C:\Users\Acer\IdeaProjects\Fsbstest\src\main\resources\static\downloads\manuals" />
       <recent name="C:\Users\Acer\IdeaProjects\Fsbstest\src\main\resources\templates" />
     </key>

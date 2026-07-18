@@ -47,5 +47,9 @@ public class HelloController {
     public String gopalMithra() {
         return "gopalmithra";
     }
+    @GetMapping("/animalBreeding")
+    public String animalBreeding() {
+        return "animalBreeding";
+    }
 
 }
