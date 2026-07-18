@@ -396,9 +396,11 @@ nav{
 
 .stats-grid{
     display:grid;
-    grid-template-columns:repeat(6,1fr);
-    gap:18px;
-    align-items:stretch;
+    grid-template-columns:repeat(5, minmax(180px,1fr));
+    justify-content:center;
+    gap:20px;
+    max-width:1100px;
+    margin:0 auto;
 }
 
 .stat-card{
@@ -549,27 +551,20 @@ nav{
 
         <div class="stat-card">
             <div class="stat-icon">🌾</div>
-            <h3 id="farmers" data-target="98099556">0</h3>
+            <h3 id="farmers" data-target="2190604">0</h3>
             <span>Livestock Owners</span>
         </div>
 
         <div class="stat-card">
-            <div class="stat-icon">🧬</div>
-            <h3 id="breeding" data-target="158624591">0</h3>
-            <span>Breeding Services</span>
-        </div>
-
-        <div class="stat-card">
-            <div class="stat-icon">💉</div>
-            <h3 id="vaccination" data-target="1668695290">0</h3>
-            <span>Vaccinations</span>
-        </div>
-
-        <div class="stat-card">
             <div class="stat-icon">📊</div>
-            <h3 id="naip" data-target="103936192">0</h3>
-            <span>NAIP-IV Services</span>
+            <h3 id="naip" data-target="5798101">0</h3>
+            <span>NAIP Services</span>
         </div>
+        <div class="stat-card">
+        <div class="stat-icon">📊</div>
+        <h3 id="abip" data-target="56542">0</h3>
+        <span>ABIP Services</span>
+    </div>
 
     </div>
 
