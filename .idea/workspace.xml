@@ -6,7 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="abb4efa3-397c-4b3b-bf9e-4638ee0feb05" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/animalBreeding.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/animalBreeding.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/gopalmithra.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/gopalmithra.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/loginpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/loginpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/photo-gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/photo-gallery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/saveGomatha.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/saveGomatha.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/video-gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/video-gallery.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
