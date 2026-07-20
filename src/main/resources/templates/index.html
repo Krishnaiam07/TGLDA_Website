@@ -2,7 +2,8 @@
     <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport"
+              content="width=1400, initial-scale=0.25, maximum-scale=1.0, user-scalable=yes">
         <title>GOVERNMENT OF TELANGANA — Telangana Livestock Development Agency (TGLDA)</title>
 
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -284,7 +285,9 @@
         transform:translateY(-50%) scale(1.12);
     }
 
-
+html,body{
+    min-width:1400px;
+}
     .hero{
         width:100%;
         background:#fff;
@@ -383,11 +386,7 @@
 
             @keyframes fadeDown { from { opacity: 0; transform: translateY(-25px); } to { opacity: 1; transform: translateY(0); } }
 
-            @media (max-width: 900px) {
-              .hero {
-              margin: 25px; padding: 28px; }
-              .agency { font-size: 16px; }
-            }
+
             .leaders-section{
         max-width:1200px;
         margin:20px auto;
@@ -635,17 +634,7 @@
     .footer-right a:hover{
         color:#ffd54f;
     }
-    @media(max-width:768px){
-        .site-footer{
-            flex-direction:column;
-            text-align:center;
-            gap:10px;
-        }
-
-        .footer-right{
-            text-align:center;
-        }
-    }.activity-title{
+    .activity-title{
         text-align:center;
         font-size:42px;
         font-weight:900;
@@ -816,37 +805,7 @@
 
     }
 
-    /* MOBILE */
 
-    @media(max-width:768px){
-
-    .activities-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .activity-card{
-
-        height:68px;
-
-    }
-
-    .activity-card h3{
-
-        font-size:14px;
-
-    }
-
-    .activity-card span{
-
-        width:36px;
-        height:36px;
-        font-size:18px;
-
-    }
-
-    }
 
     /* ==========================
        IMPORTANT LINKS DROPDOWN
@@ -917,46 +876,10 @@
         border-right:1px solid #d9d9d9;
         border-bottom:1px solid #d9d9d9;
     }
-     @media (max-width:1400px){
 
-    .home-layout{
-        grid-template-columns:260px minmax(0,1fr) 260px;
-    }
 
-    }
 
-    @media (max-width:1200px){
 
-    .home-layout{
-        grid-template-columns:1fr;
-    }
-
-    .side-leaders{
-        max-width:350px;
-        margin:auto;
-    }
-
-    .activities-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    }
-
-    @media (max-width:768px){
-
-    .activities-grid{
-        grid-template-columns:1fr;
-    }
-
-    .hero-text h2{
-        font-size:34px;
-    }
-
-    .of-line h3{
-        font-size:20px;
-    }
-
-    }
         </style>
     </head>
 
